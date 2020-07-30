@@ -1,3 +1,7 @@
+
+const dotenv = require('dotenv');
+dotenv.config();
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -6,9 +10,12 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/indexRouter');
 var usersRouter = require('./routes/users');
-const { Mongoose } = require('mongoose');
+const mongoose  = require('mongoose');
 
 var app = express();
+
+const PORT = process.env.PORT;
+const DB = process.env.DB;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -38,5 +45,11 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+mongoose.connect(DB, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }, (err, db) => {
+  if(!err && db) console.log('DB connected')
+})
+
+app.listen(PORT, () => console.log(`App running on port ${PORT}`));
 
 module.exports = app;
