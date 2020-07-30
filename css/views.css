@@ -21,14 +21,13 @@ i {
     font-size: 1.5em;
 }
 
-.arrow-left div:hover {
-    color: #157fbc;
-
+.card-header div h4 {
+    color: #343a40;
 }
-
-.arrow-right div:hover {
+.arrow-left div:hover,
+.arrow-right div:hover,
+.card-header div h4:hover  {
     color: #157fbc;
-
 }
 
 /*========== Card Styles==============*/
