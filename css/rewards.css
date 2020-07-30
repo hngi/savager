@@ -1,8 +1,7 @@
 
 
 
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap');
 html {
     scroll-behavior: smooth;
 }
@@ -24,6 +23,9 @@ body::-webkit-scrollbar-thumb {
     border-radius:50%;           /* roundness of the scroll thumb */
     margin-right:1px;
 }
+p {
+    font-weight: 300;
+}
 .btn {
     border-radius: 0rem;
     font-size: x-small;
@@ -43,7 +45,8 @@ body::-webkit-scrollbar-thumb {
 }
 .btn-primary.focus, .btn-primary:focus {
     background-color: #157fbc;
-    border-color: #157fbc    box-shadow: 0 0 0 0.2rem rgb(194 128 255 / 59%);
+    border-color: #157fbc;
+    box-shadow: 0 0 0 0.2rem rgb(194 128 255 / 59%);
 }
 .splash a {
     padding: .6rem 2rem;
@@ -84,8 +87,17 @@ body::-webkit-scrollbar-thumb {
     font-size: 20px;
 }
 .recent-earning-section .meme-card {
-    border: 1px solid #cdcdcd;
+  border: 2px solid #cdcdcd;
+  border-radius: 6px;
 }
 .recent-earning-section .preview-img img {
     border: 4px solid #fff;
+}
+.recent-earning-section .description-title {
+    font-size:15px;
+    font-weight: 600;
+}
+.recent-earning-section .preview-description a {
+    font-size: 13px;
+    font-weight: 200;
 }
