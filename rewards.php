@@ -28,7 +28,7 @@
             <div class="splash">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-6 mt-sm-5 offset-sm-1">
+                        <div class="col-sm-6 mt-sm-5 mb-sm-5 offset-sm-1">
                             <div class="hero-description pb-5 pt-5 text-left">
                                 <h2>Earned points:</h2>
                                 <p><span class="wallet">750</span> <sup>pts</sup></p>
