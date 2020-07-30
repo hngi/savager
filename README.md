@@ -1,5 +1,4 @@
-# Welcome to the official repo of Savage Collector 🎉
-
-## allows people to curate a funny / savage replies
-
-### Domain is savagecollector.com
+# savager
+Add css files to the css folder 
+your images should be in img folder 
+js files in js folder 
