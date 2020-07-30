@@ -7,14 +7,15 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const mongoose  = require('mongoose');
+
 
 var indexRouter = require('./routes/indexRouter');
 var usersRouter = require('./routes/users');
-const mongoose  = require('mongoose');
+const leaderboardRouter = require('./routes/leaderboard');
 
 var app = express();
 
-const PORT = process.env.PORT;
 const DB = process.env.DB;
 
 // view engine setup
@@ -29,6 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/leaderboard', leaderboardRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -49,7 +51,5 @@ app.use(function(err, req, res, next) {
 mongoose.connect(DB, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }, (err, db) => {
   if(!err && db) console.log('DB connected')
 })
-
-app.listen(PORT, () => console.log(`App running on port ${PORT}`));
 
 module.exports = app;
