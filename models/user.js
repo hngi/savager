@@ -25,6 +25,7 @@ const userSchema = new schema({
         type: Date,
         required: false,
     },
+    points:{type: Number}
 },{ timestamps: true }
 )
 
