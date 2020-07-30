@@ -32,9 +32,9 @@ p {
     padding: .6rem 1rem;
 }
 .btn-primary {
-    background-color: #00000000;
+    background-color: #157fbc;
     border-color: #157fbc;
-    color: #000;
+    color: #fff;
 }
 .btn-primary:hover,
 .btn-primary:not(:disabled):not(.disabled).active,
@@ -51,6 +51,7 @@ p {
 }
 .splash a {
     padding: .6rem 2rem;
+    letter-spacing: 1px;
 }
 .color1 {
     color: #00FFC5;
@@ -61,6 +62,9 @@ p {
 .color3 {
     color: #f3f3f3;
 }
+.color4 {
+    color: #000;
+}
 .bg-color1 {
     background-color: #00FFC5;
 }
@@ -70,9 +74,25 @@ p {
 .bg-color3 {
     background-color: #fff;
 }
+.bg-color4 {
+    background-color: #000;
+}
 
 .hero-section {
-    padding: 4rem 0rem;
+    background-image: url(../img/reward-hero2.jpg);
+    height: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero-section .splash {
+    background-color: #22222280;
+    background-repeat: repeat-x;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: inherit;
 }
 .hero-section .wallet {
     font-size: 60px;
