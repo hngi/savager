@@ -1,0 +1,58 @@
+/*==========Basic Styles==============*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #cccccc;
+}
+
+main {
+    font-family: 'Mulish', sans-serif;
+    background-color: #cccccc;
+    font-size: 16px;
+}
+
+h1 {
+    color: #157fbc;
+}
+
+
+/*========== Previous / Next Styles==============*/
+
+i {
+    font-size: 1.5em;
+}
+
+
+/*========== Card Styles==============*/
+
+.container {
+    height: calc(100% - 15px);
+}
+
+.card {
+    margin-bottom: 50px;
+}
+
+#profile img {
+    height: 80px;
+}
+
+.card-footer i {
+    color: #157fbc;
+}
+
+.card-footer i:hover {
+    color: rgba(255, 99, 71, 0.712);
+    transition: all ease-in;
+    transform: translateY(-4px);
+    transition-duration: .1s;
+}
+
+.card-footer i:active {
+    color: purple;
+}
