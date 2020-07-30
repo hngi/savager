@@ -44,8 +44,11 @@ i {
 
 .card-footer i {
     color: #157fbc;
-}.card-footer {
-    padding: 0.55rem .25rem;
+}
+.card-footer {
+padding: .75rem 1.25rem !important;}
+.list-group-item {
+    padding: .55rem .25rem !important;
 }
 
 .card-footer i:hover {
