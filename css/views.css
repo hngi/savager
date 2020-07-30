@@ -12,7 +12,7 @@ html {
 main {
     font-family: 'Mulish', sans-serif;
     background-color: #cccccc;
-    font-size: 16px;  
+    font-size: 16px;
 }
 
 /*========== Previous / Next Styles==============*/
@@ -21,17 +21,34 @@ i {
     font-size: 1.5em;
 }
 
+.arrow-left div:hover {
+    color: #157fbc;
+
+}
+
+.arrow-right div:hover {
+    color: #157fbc;
+
+}
+
 /*========== Card Styles==============*/
 .container {
     height: calc(100% - 15px);
 }
+
 .card {
     margin-bottom: 50px;
 }
+
 #profile img {
     height: 80px;
 }
 
 .card-footer i {
     color: #157fbc;
+    font-size: 2em;
+}
+
+.card-footer i:hover {
+    color: #00ffc5;
 }
