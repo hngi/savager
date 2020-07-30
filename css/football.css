@@ -59,6 +59,12 @@ a:hover{
         font-size: 1rem;
         text-align: right;
     }
+    .size{
+        width: 100%;
+    }
+    i{
+        font-size: 1rem;
+    }
 }
 
 @media all and (min-width: 768px){
@@ -72,5 +78,8 @@ a:hover{
     h4{
         font-size: 1.5rem;
         text-align: right;
+    }
+    .size{
+        width: 50%;
     }
 }

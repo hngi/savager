@@ -8,7 +8,6 @@
 
 .nav_button {
     border: 1px solid #00ffc5;
-    color: #fff !important;
 }
 
 .nav_button:hover {
@@ -22,11 +21,11 @@
 }
 
 #navbarResponsive a:link {
-    color: #fff !important;
+    color: #fff;
 }
 
 #navbarResponsive a:visited {
-    color: #fff !important;
+    color: #fff;
 }
 
 #navbarResponsive a:hover {

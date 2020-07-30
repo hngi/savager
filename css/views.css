@@ -25,16 +25,17 @@ i {
     color: #343a40;
 }
 .arrow-left div:hover,
-.arrow-right div:hover,
-.card-header div h4:hover  {
-    color: #157fbc;
+.arrow-right div:hover{
+    color: #000;
 }
 
 /*========== Card Styles==============*/
 .container {
     height: calc(100% - 15px);
 }
-
+.card-header div h4:hover  {
+    color: #157fbc;
+}
 .card {
     margin-bottom: 50px;
 }
@@ -49,5 +50,5 @@ i {
 }
 
 .card-footer i:hover {
-    color: #00ffc5;
+    color: #157fbc;
 }
