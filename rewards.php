@@ -31,9 +31,9 @@
                         <div class="col-sm-6 mt-sm-5 offset-sm-1">
                             <div class="hero-description pb-5 pt-5 text-left">
                                 <h2>Earned points:</h2>
-                                <p><span class="wallet">25</span> <sup>$</sup></p>
-                                <p>You've got a total of 500 points</p>
-                                <a class="btn btn-primary btn-lg text-uppercase" href="#" role="button">Withdraw</a>
+                                <p><span class="wallet">750</span> <sup>pts</sup></p>
+                                <p>You've got a total of 750 points</p>
+                                <a class="btn btn-primary btn-lg text-uppercase" href="#" role="button">Claim reward</a>
                             </div>
                         </div>
                         <div class="col-sm-7">
@@ -68,7 +68,7 @@
                                 <div class="col-2">
                                     <div class="preview-reward">
                                         <p></p>
-                                        <p><span class="wallet">125</span> <sup>$</sup></p>
+                                        <p><span class="wallet">125</span> <sup>pt</sup></p>
                                         <!-- <p>500 pts</p> -->
                                     </div>
                                 </div>
@@ -90,7 +90,7 @@
                                 <div class="col-2">
                                     <div class="preview-reward">
                                         <p></p>
-                                        <p><span class="wallet">5</span> <sup>$</sup></p>
+                                        <p><span class="wallet">5</span> <sup>pt</sup></p>
                                         <!-- <p>500 pts</p> -->
                                     </div>
                                 </div>
@@ -112,7 +112,7 @@
                                 <div class="col-2">
                                     <div class="preview-reward">
                                         <p></p>
-                                        <p><span class="wallet">25</span> <sup>$</sup></p>
+                                        <p><span class="wallet">25</span> <sup>pt</sup></p>
                                         <!-- <p>500 pts</p> -->
                                     </div>
                                 </div>
@@ -134,7 +134,7 @@
                                 <div class="col-2">
                                     <div class="preview-reward">
                                         <p></p>
-                                        <p><span class="wallet">212</span> <sup>$</sup></p>
+                                        <p><span class="wallet">212</span> <sup>pt</sup></p>
                                         <!-- <p>500 pts</p> -->
                                     </div>
                                 </div>
