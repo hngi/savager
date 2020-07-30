@@ -5,44 +5,20 @@
 body{
     font-family: 'Mulish', sans-serif;
 }
-.container{
+.content{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 .first{
-    border: 1px solid red;
+    margin-top: 80px;
 }
 h4{
     margin-bottom: 20px;
+    text-align: center;
 }
-.item1{
-background: url(./img/6.jpg);
-background-repeat: no-repeat;
-background-position: center;
-background-size: contain;
-height: 400px;
-margin-top: -20px;
-}
-/* .item2{
-    background: url(./img/8.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    height: 400px;
-}
-.item3{
-    background: url(./img/17.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    height: 400px;
-}  */
 .container-fluid{
     margin-bottom: 30px;
-}
-h3{
-    margin-top: 20px;
 }
 .card{
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 24px 32px rgba(0, 0, 0, 0.04);
@@ -64,38 +40,58 @@ h3{
 }
 .botton .btn{
     background-color: #157fbc;
-    color:#fff;
+    color:#fff !important;
     margin-top: 20px;
     box-shadow: 0px 0px 0.569767px rgba(43, 39, 80, 0.04), 0px 2.27907px 4.55814px rgba(43, 39, 80, 0.04), 0px 9.11628px 13.6744px rgba(43, 39, 80, 0.04), 0px 13.6744px 18.2326px rgba(43, 39, 80, 0.04);
 }
-/* #content{
-    transform: translate(-50%, -50%);
-} */
+form{
+    text-align: center;
+}
+.comment{
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+}
 @media only screen and (min-width: 600px){
-    .item1{
-
-    }
 .card-body i{
     padding: 20px;
     font-size: 1.5em;
     margin: -30px 0;
     }
+.botton .btn{
+    margin-bottom: 30px;
+}
 }
 @media only screen and (min-width: 768px){
-    .item1{
-margin-top: -50px;
+    .container-fluid{
+        margin-top: 90px;
+    }
+    h4, h3{
+       font-size: 1.3em; 
     }
     .card-body i{
-        padding: 0 10px;
-        font-size: 1em;
+        padding: 0 7px;
+        font-size: .9em;
+    }
+    .botton .btn{
+        margin-bottom: 30px;
     }
 }
 @media only screen and (min-width: 1024px){
+    .first{
+        margin-top: 75px;
+    }
+    h4{
+        margin-bottom: 20px;
+    }
+    .container-fluid{
+        margin-top: 100px;
+    }
     .card-body i{
-        padding: 20px;
+        padding: 15px;
         font-size: 1.2em;
         }
         .botton .btn{
-margin-top: 40px;
+        margin-top: 40px;
         }
 }

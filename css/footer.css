@@ -1,6 +1,8 @@
 body{
-    background: #ccc;
     font-family: 'Mulish', sans-serif;
+}
+section{
+    background: #ccc;
 }
 .in_display{
     display: inline-flex;
