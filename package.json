@@ -1,23 +1,26 @@
 {
-  "name": "savage_collector",
-  "version": "1.0.0",
-  "description": "an app that displays savage memes",
-  "main": "server.js",
+  "name": "savage-collector",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/auleki/savager.git"
+    "start": "node ./bin/www"
   },
   "author": "aukoda",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/auleki/savager/issues"
   },
-  "homepage": "https://github.com/auleki/savager#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "nodemon": "^2.0.4"
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/auleki/savager.git"
   }
+
 }
