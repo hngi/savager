@@ -3,17 +3,34 @@
     padding: 0;
     box-sizing: border-box;
 }
+body    {
+    background: #eef3f6;;
+}
 #header {
-    font-size: 2rem;
+    font-size: 1.3rem;
   
-  
+}
+#signin-container   {
+    margin-top: 10rem;
+    background: white;
+    border-radius: 10px;
+}
+form input   {
+    background-color: #f6f9fb;
 }
 
 #btn    {
     
-  font-weight: bold;
+  
     font-size: 1rem;
 }
 #rememberme {
     text-align: center;
+}
+
+@media screen and (max-width: 760px)    {
+    #signin-container   {
+        margin-top: 3rem;
+       ;
+    }
 }
