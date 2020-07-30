@@ -16,6 +16,11 @@ body{
 h4{
     margin-bottom: 20px;
     text-align: center;
+    text-decoration: underline #157fbc;
+
+}
+h3{
+    color: #157fbc;
 }
 .container-fluid{
     margin-bottom: 30px;
@@ -83,6 +88,9 @@ form{
     }
     h4{
         margin-bottom: 20px;
+    }
+    h3{
+        font-size: 1.8em;
     }
     .container-fluid{
         margin-top: 100px;

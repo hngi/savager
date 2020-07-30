@@ -3,6 +3,7 @@ nav{
 }
 .nav_button{
     border: 1px solid #00ffc5;
+    background-color: #157fbc;
 }
 .nav_button:hover{
     color: #157fbc;
