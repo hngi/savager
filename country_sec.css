@@ -19,7 +19,9 @@ main {
 h1 {
     color: #157fbc;
 }
-
+a:hover {
+    text-decoration: none;
+}
 
 /*========== Previous / Next Styles==============*/
 
