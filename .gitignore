@@ -3,4 +3,5 @@ yarn-error.log
 .env
 .nyc_output
 coverage
+package-lock.json
 build/
