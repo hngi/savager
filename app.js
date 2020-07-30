@@ -1,14 +1,21 @@
+
+const dotenv = require('dotenv');
+dotenv.config();
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const mongoose  = require('mongoose');
+
 
 var indexRouter = require('./routes/indexRouter');
-var usersRouter = require('./controllers/authentication');
-const { Mongoose } = require('mongoose');
-
+var usersRouter = require('./routes/users');
+var Aunthentication = require('./controllers/authentication');
 var app = express();
+
+const DB = process.env.DB;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -22,7 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-
+app.use('/users', Aunthentication);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -38,5 +45,9 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+mongoose.connect(DB, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }, (err, db) => {
+  if(!err && db) console.log('DB connected')
+})
 app.listen(3000);
 module.exports = app;
