@@ -12,7 +12,6 @@ const mongoose  = require('mongoose');
 
 var indexRouter = require('./routes/indexRouter');
 var usersRouter = require('./routes/users');
-const leaderboardRouter = require('./routes/leaderboard');
 
 var app = express();
 
@@ -30,7 +29,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/leaderboard', leaderboardRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
