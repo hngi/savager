@@ -44,6 +44,8 @@ i {
 
 .card-footer i {
     color: #157fbc;
+}.card-footer {
+    padding: 0.55rem .25rem;
 }
 
 .card-footer i:hover {
