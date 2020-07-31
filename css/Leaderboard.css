@@ -56,7 +56,9 @@ html, body{
 /* Components */
 
 #wrapper{
-    margin-top: 5%;
+    color: #000;
+    margin-top: 10%;
+    margin-bottom: 5%;
 }
 
 .title{
@@ -97,7 +99,7 @@ thead tr{
 
 thead tr th{
     text-transform: uppercase;
-    font-weight: bolder;
+    font-weight: bolder; 
     font-size: larger;
 }
 
@@ -159,7 +161,16 @@ td.username{
 
 /* Responsiveness */
 
+@media screen and (max-width: 875px) {
+    #wrapper{
+        margin-top: 20%;
+    }
+}
+
 @media screen and (max-width: 768px) {
+    #wrapper{
+        margin-top: 30%;
+    }
     table{
         overflow-x: scroll;
     }
