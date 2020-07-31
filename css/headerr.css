@@ -1,8 +1,6 @@
-
 .navbar img {
     width: 40%;
 }
-
 .navbar {
     background-color: #157fbc;
 }
@@ -37,6 +35,7 @@
 #navbarResponsive a:active {
     color: #00ffc5 !important;
     text-decoration: underline;
+
 }
 @media all and (min-width: 0px){
     .navbar-brand{

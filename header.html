@@ -1,166 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link 
-        rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
-        crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/css/tooltipster.min.css">
-    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/header.css">
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        <div class="header">
-            <div class="container ">
-                <div class="d-flex header-wrapper flex-md-column flex-xl-row">
-                    <div class="header-container d-md-flex mb-2">
-                        <div class="dropdown">
-                            <a class="btn btn-outline-light dropdown-toggle header-logo" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <img src="img/Sharehub.svg" alt="">
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item" href="#">Home</a>
-                                <a class="dropdown-item" href="#">Single Post</a>
-                                <a class="dropdown-item" href="#">Multiple Image Post</a>
-                                <a class="dropdown-item" href="#">Single Video Post</a>
-                                <a class="dropdown-item" href="#">User</a>
-                                <a class="dropdown-item" href="#">Edit Post</a>
-                                <a class="dropdown-item" href="#">Login</a>
-                                <a class="dropdown-item" href="#">Signup</a>
-                            </div>
-                          </div>
-                        <nav>
-                            <ul class="header-menu">
-                                <li>
-                                    <a href="#">Categories</a>
-                                    <div class="header-nav">
-                                        <div class="container">
-                                            <ul>
-                                                <li><a href="#">New Releases</a></li>
-                                                <li><a href="#">Popular</a></li>
-                                                <li><a href="#">Top 50</a></li>
-                                                <li><a href="#">Upcoming</a></li>
-                                                <li><a href="#">Gaming News</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="active">
-                                    <a href="#">Hot</a>
-                                    <div class="header-nav">
-                                        <div class="container">
-                                            <ul>
-                                                <li><a href="#">New Releases</a></li>
-                                                <li><a href="#">Popular</a></li>
-                                                <li><a href="#">Top 50</a></li>
-                                                <li><a href="#">Upcoming</a></li>
-                                                <li><a href="#">Gaming News</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="#">Trending</a>
-                                    <div class="header-nav">
-                                        <div class="container">
-                                            <ul>
-                                                <li><a href="#">New Releases</a></li>
-                                                <li><a href="#">Popular</a></li>
-                                                <li><a href="#">Top 50</a></li>
-                                                <li><a href="#">Upcoming</a></li>
-                                                <li><a href="#">Gaming News</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="#">Reactions</a>
-                                    <div class="header-nav">
-                                        <div class="container">
-                                            <div class="col-sm-12">
-                                                <div class="header-nav-feeling sh-feeling">
-                                                    <a href="#" rel="tooltip" data-original-title="Happy"><img src="img/Happy.svg" alt=""><span>126</span></a>
-                                                    <a href="#" rel="tooltip" data-original-title="Lol"><img src="img/LOL.svg" alt=""><span>256</span></a>
-                                                    <a href="#" rel="tooltip" data-original-title="Surprised"><img src="img/Surprised.svg" alt=""><span>741</span></a>
-                                                    <a href="#" rel="tooltip" data-original-title="Sad"><img src="img/Sad.svg" alt=""><span>2K</span></a>
-                                                    <a href="#" rel="tooltip" data-original-title="Tongue Out"><img src="img/Tongue_Out.svg" alt=""><span>245</span></a>
-                                                    <a href="#" rel="tooltip" data-original-title="Doubt"><img src="img/Doubt.svg" alt=""><span>237</span></a>
-                                                    <a href="#" rel="tooltip" data-original-title="No words"><img src="img/No_words.svg" alt=""><span>237</span></a>
-                                                    <a href="#" rel="tooltip" data-original-title="Love"><img src="img/Love.svg" alt=""><span>1,236</span></a>
-                                                    <a href="#" rel="tooltip" data-original-title="Blushing"><img src="img/Blushing.svg" alt=""><span>365</span></a>
-                                                    <a href="#" rel="tooltip" data-original-title="Cool"><img src="img/Cool.svg" alt=""><span>412</span></a>
-                                                    <a href="#" rel="tooltip" data-original-title="Angry"><img src="img/Angry.svg" alt=""><span>478</span></a>
-                                                    <a href="#" rel="tooltip" data-original-title="Dead"><img src="img/Dead.svg" alt=""><span>2K</span></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="header-search">
-                        <form action="#">
-                            <label>
-                                <input type="search" name="global-search" class="form-control" placeholder="Search Posts, hashtags, categories">
-                                <i class="fa fa-search"></i>
-                            </label>
-                        </form>
-                    </div>
-                    <div class="header-control d-flex">
-                        <a href="#" class="header-btn-like sh-btn-icon"><i class="fa fa-heart"></i></a>
-                        <a href="#" class="header-btn-comment sh-btn-icon"><i class="fa fa-comments"></i></a>
-                        <a href="#" class="header-btn-notification sh-btn-icon"><i class="fa fa-bell"></i></a>
-                        <a href="#" class="header-avatar sh-avatar"><img src="img/avatar-01.png" alt=""></a>
-                        <a href="#" class="header-btn-upload btn btn-primary"><i class="icon-Upvote"></i> Upload</a>
-                    </div>
-                    <!-- <div class="sh-user">
-                        <div class="sh-user__head">
-                            <p>3 New Notifications</p>
-                            <a href="#" class="sh-user__close sh-btn-icon"><i class="icon-Cancel"></i></a>
-                        </div>
-                        <div class="sh-user__content">
-                            <div>
-                                <div><a href="#"><img src="img/Badge_03.svg" alt=""></a></div>
-                                <div>
-                                    <div>New Badge Earned</div>
-                                    <span>Get 1K upvotes on your post</span>
-                                </div>
-                            </div>
-                            <div>
-                                <div><a href="#"><img src="img/user-02.jpg" alt=""></a></div>
-                                <div>
-                                    <div>Life choices of my cat</div>
-                                    <span>Earned <i class="icon-Upvote"></i> 210</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sh-user__footer">
-                            <a href="#" class="sh-comments__avatar sh-avatar"><img src="img/avatar-01.png" alt=""></a>
-                            <div>
-                                <a href="#">bastion . </a>
-                                <span>1 hour ago</span>
-                                <p>Hey, how’s it going nathun?</p>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-    </header>
 
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/07ba39f804.js" crossorigin="anonymous"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/headerr.css">
+
+  <title>Savage Collections</title>
+</head>
+
+<body>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="col-7 col-md-3 col-lg-2 navbar-brand" href="#top"><img class="img-fluid w-75" src="./img/savagecollector-logo.png"
+          alt="Savage Collection Logo"> </a>
+
+
+      <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" role="button"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-items"><a href="#" class="nav-link">Home</a></li>
+          <li class="nav-items"><a href="#" class="nav-link">About</a></li>
+          <li class="nav-items"><a href="#" class="nav-link">Top Rated</a></li>
+          <li class="nav-items"><a href="#" class="nav-link">Newest</a></li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">Categories</a>
+            <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item " href="#">Savage</a>
+              <a class="dropdown-item " href="#">Stand Up</a>
+              <a class="dropdown-item " href="#">Dank Memes</a>
+            </div>
+          </li>
+
+          <li class="nav-items"><a href="#" class="nav-link">Contact Us</a></li>
+          <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn nav_button my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+  </script>
 </body>
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/js/jquery.tooltipster.min.js"></script>
-<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-<script src="index.js"></script>
+
 </html>
