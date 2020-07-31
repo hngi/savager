@@ -25,6 +25,12 @@ body{
     font-size: var(--fs-foot);
 }
 
+a,
+a:hover,
+a:active{
+    text-decoration: none;
+}
+
 p{
     margin: 0;
 }
@@ -111,4 +117,11 @@ p{
 .signup-google{
     background-color: #dd4b39;
     color: #ffffff;
+}
+
+.signup-form-social a,
+.signup-form-social a:hover,
+.signup-form-social a:active{
+    color: #ffffff;
+    text-decoration: none;
 }

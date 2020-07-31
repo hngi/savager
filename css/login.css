@@ -25,6 +25,13 @@ body{
     font-size: var(--fs-foot);
 }
 
+a,
+a:hover,
+a:active{
+    text-decoration: none;
+}
+
+
 p{
     margin: 0;
 }
@@ -139,3 +146,9 @@ p{
     color: #ffffff;
 }
 
+.login-form-social a,
+.login-form-social a:hover,
+.login-form-social a:active{
+    color: #ffffff;
+    text-decoration: none;
+}
