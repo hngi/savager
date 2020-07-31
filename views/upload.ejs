@@ -6,6 +6,10 @@
     <title>Upload Page</title>
 </head>
 <body>
-    <h1>Hitting the Uploads page</h1>
+    <form action="/posts/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="avatar id="file" accept=".jpg,.jpeg,.png" />
+        <label for="file">Upload</label>
+        <button type="submit">submit</button>
+    </form>
 </body>
 </html>
