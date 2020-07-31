@@ -21,13 +21,13 @@ router.post('/signup', urlencodedParser, async (req, res) => {
         const userNames = await User.findOne({ 'local.user_name': userName } );
         
         if (user) {
-            req.error.message = "Email is in use";
-            res.render("signup");
+            console.log('=============')
+            res.render('signup', { title: 'Express', error: null });
+            // res.redirect('/signup')
         }
         else if (userNames) {
             var error = {message:"Username Already exists"};
-            req.error.message = "Email is in use";
-            res.render('signup');
+            res.render('signup', { title: 'Express', error: 'Username Already exists' });
         }
     
         else if (!user && !userNames) {

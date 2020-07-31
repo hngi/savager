@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/css/tooltipster.min.css">
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/signup.css">
+    <link rel="stylesheet" href="/css/signup.css">
     <title>Savager - Signup</title>
 </head>
 
@@ -31,6 +31,11 @@
                         <div class="signup-submit mb-4 d-flex justify-content-between">
                             <a href="login.html">Already have an account?</a>
                             <button type="submit" class="signup-button">Sign up</button>
+                        </div>
+                        <div>
+                            <% if(error != null){ %>
+                                <p style="color: red;"><%= error %></p>
+                            <% } %> 
                         </div>
                         <!-- <div class="signup-form-footer py-3">
                             <p class="py-3">or with Social Network</p>

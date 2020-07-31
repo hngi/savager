@@ -18,5 +18,5 @@ exports.loginView = (req, res) => {
 }
 
 exports.signupView = (req, res) => {
-    res.render('signup', { title: 'Express' });
+    res.render('signup', { title: 'Express', error: null });
 }
