@@ -1,25 +1,39 @@
-.nav_button{
+.navbar {
+    background-color: #157fbc;
+}
+
+.navbar img {
+    width: 40%;
+}
+
+.nav_button {
     border: 1px solid #00ffc5;
 }
-.nav_button:hover{
+
+.nav_button:hover {
     color: #157fbc;
     background-color: #00ffc5;
 }
-.nav_items_hover:hover{
+
+.nav_items_hover:hover {
     text-transform: uppercase;
-    
+
 }
-#navbarResponsive a:link{
-    color: #333333!important
+
+#navbarResponsive a:link {
+    color: #fff;
 }
-#navbarResponsive a:visited{
-    color: #333333!important
+
+#navbarResponsive a:visited {
+    color: #fff;
 }
-#navbarResponsive a:hover{
-    color: #00ffc5!important;
+
+#navbarResponsive a:hover {
+    color: #00ffc5 !important;
     font-weight: bold;
 }
-#navbarResponsive a:active{
-    color: #00ffc5!important;
+
+#navbarResponsive a:active {
+    color: #00ffc5 !important;
     text-decoration: underline;
 }
