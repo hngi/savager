@@ -1,6 +1,6 @@
 
-const dotenv = require('dotenv');
-dotenv.config();
+// const dotenv = require('dotenv');
+// dotenv.config();
 
 var createError = require('http-errors');
 var express = require('express');
@@ -46,8 +46,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-mongoose.connect(DB, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }, (err, db) => {
-  if(!err && db) console.log('DB connected')
-})
+// mongoose.connect(DB, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }, (err, db) => {
+//   if(!err && db) console.log('DB connected')
+// })
 
 module.exports = app;
