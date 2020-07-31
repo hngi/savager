@@ -1,6 +1,5 @@
-
-// const dotenv = require('dotenv');
-// dotenv.config();
+const dotenv = require('dotenv');
+dotenv.config();
 
 const createError = require('http-errors');
 const express = require('express');
@@ -17,6 +16,7 @@ const postsRouter = require('./routes/postsRouter');
 const app = express();
 
 const DB = process.env.DB;
+const port = process.env.PORT || 3000;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -47,8 +47,12 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-// mongoose.connect(DB, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }, (err, db) => {
-//   if(!err && db) console.log('DB connected')
-// })
+mongoose.connect(DB, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }, (err, db) => {
+  if(!err && db) console.log('DB connected')
+})
+
+app.listen(port, () => {
+  console.log(`Listening on port: ${port}`);
+})
 
 module.exports = app;
