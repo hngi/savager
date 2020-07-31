@@ -31,7 +31,7 @@ h1{
 .arrows {
     font-size: 1.5em;
 }
-.card-body p{
+blockquote p,.card-body p{
     color: #0c0e0c;
 }
 @media (min-width: 576px){
