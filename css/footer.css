@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --ff-primary: 'Mulish', sans-serif;
+
+    --fs-h1: 3.25rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1.76rem;
+    --fs-h4: 1.62rem;
+    --fs-reg: 1.23rem;
+    --fs-nav: 1rem;
+    --fs-foot: 0.85rem;
+}
+
+body{
+    font-family: var(--ff-primary);
+    color: #ffffff;
+    font-size: var(--fs-foot);
+}
+
+a,
+a:hover,
+a:active{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.footer-container{
+    background-color: #157fbc;
+    padding: 2rem;
+}
+.footer-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo-social img{
+    width: 8rem;
+}
+
+.footer-social{
+    border-radius: 50%;
+    backface-visibility: hidden;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0.355rem;
+    justify-content: center;
+    align-items: center;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s;
+}
+
+.footer-facebook{
+    background-color: #3b5998;
+    color: #ffffff;
+}
+
+.footer-twitter{
+    background-color: #55acee;
+    color: #ffffff;
+}
+
+.footer-google{
+    background-color: #dd4b39;
+    color: #ffffff;
+}
+
+.footer-form-social a,
+.footer-form-social a:hover,
+.footer-form-social a:active{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+@media all and (min-width: 1200px){
+    :root{
+        --ff-primary: 'Mulish', sans-serif;
+
+        --fs-h1: 3.25rem;
+        --fs-h2: 2rem;
+        --fs-h3: 1.76rem;
+        --fs-h4: 1.62rem;
+        --fs-reg: 1.23rem;
+        --fs-nav: 1rem;
+        --fs-foot: 1.2rem;
+    }
+    .footer-social{
+        padding: 1rem;
+    }
+}
+
+@media all and (max-width: 424px){
+    .footer-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .pages{
+        padding-top: 1rem;
+    }
+}
