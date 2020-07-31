@@ -3,11 +3,7 @@
 // export
 
 exports.viewTest = (req, res) => {
-    res.render('index', { login: '/login', signup: '/signup' });
-    // res.readFile("../index.html", "utf8", (err, data) => {
-    //     if(err) console.log(err);
-    //     res.send(data);
-    // });
+    res.redirect('/posts')
 }
 
 exports.signinView = (req, res) => {

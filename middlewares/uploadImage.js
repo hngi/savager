@@ -6,6 +6,7 @@ const upload = multer({ dest: "uploads" });
 const uploadImage = async (req, res, next) => {
   try {
     const imagePath = req.file.path;
+
     if (!imagePath) {
       return next(new Error("error submitting form"));
     }
