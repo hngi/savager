@@ -10,7 +10,10 @@ exports.viewTest = (req, res) => {
     // });
 }
 
-exports.signinView = (req, res) => {
+exports.loginView = (req, res) => {
+    if (req.error) {
+        res.render('login', { error: req.error.message });
+    }
     res.render('login', { title: 'Express' });
 }
 

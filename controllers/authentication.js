@@ -13,48 +13,50 @@ router.get('/signup',async (req, res) => {
 })
 
 router.post('/signup', urlencodedParser, async (req, res) => {
-  
     var email = req.body.email
     var userName = req.body.user_name
-    const user = await User.findOne({ 'local.email': email } );
+    try {
+        const user = await User.findOne({ 'local.email': email } );
    
-    const userNames = await User.findOne({ 'local.user_name': userName } );
-    
-    if (user) {
-        var data={"message":"Email is in use"}
-       res.render("signup",{data:data})
-    }
-    else if (userNames) {
+        const userNames = await User.findOne({ 'local.user_name': userName } );
         
-        var data={"message":"Username Already exists"}
-        res.render('signup',{data:data})
-    }
-   
-    else if (!user && !userNames) {
-        try{
-   
-        const hashedPassword = await bcrypt.hash(req.body.password, 10)
-        const user = await User.create({
-            local: {
-                first_name: req.body.first_name,
-                user_name: req.body.user_name,
-                last_name: req.body.last_name,
-                email: req.body.email,
-                is_active: 1,
-                password: hashedPassword,
-                country: req.body.country
+        if (user) {
+            req.error.message = "Email is in use";
+            res.render("signup");
+        }
+        else if (userNames) {
+            var error = {message:"Username Already exists"};
+            req.error.message = "Email is in use";
+            res.render('signup');
+        }
+    
+        else if (!user && !userNames) {
+            try{
+                const hashedPassword = await bcrypt.hash(req.body.password, 10)
+                const user = await User.create({
+                    local: {
+                        first_name: req.body.first_name,
+                        user_name: req.body.user_name,
+                        last_name: req.body.last_name,
+                        email: req.body.email,
+                        is_active: 1,
+                        password: hashedPassword,
+                        country: req.body.country
+                    }
+                })
+                console.log(user)
+                req.user = user;
+                res.redirect("/users/dashboard")
             }
-        })
-    console.log(user)
-    res.render("login")
+            catch(e){
+                res.send(e.message)
+            }
+        }
+        
+    } catch (error) {
+        res.send(error.message)
+        
     }
-
-    catch(e){
-    res.send(e.message)
-    }
-
-}
-
 })    
 
     
@@ -96,5 +98,10 @@ catch(e){
     res.send(e.message)
 }
     }
+})
+
+router.get('/dashboard',(req, res) => {
+    res.render("user_dashbaord")
+
 })
 module.exports=router;
