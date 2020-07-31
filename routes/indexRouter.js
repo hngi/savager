@@ -8,6 +8,7 @@ const indexController = require("../controllers/indexController");
 router.get('/', indexController.viewTest);
 
 
+
 // router.get('/', function(req, res, next) {
 //   res.render('index', { title: 'Express' });
 // });
