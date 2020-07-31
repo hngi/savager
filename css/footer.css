@@ -33,6 +33,7 @@ a:active{
 
 ul{
     list-style-type: none;
+    margin-right: 1rem;
 }
 
 .footer-container{
@@ -105,7 +106,7 @@ ul{
     }
 }
 
-@media all and (max-width: 424px){
+@media all and (max-width: 767px){
     .footer-wrapper{
         display: flex;
         flex-direction: column;
