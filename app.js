@@ -19,8 +19,18 @@ const DB = process.env.DB;
 const port = process.env.PORT || 3000;
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+// app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+// app.get('/', (req, res) =>{
+//   res.render('index');
+// })
+
+app.set('port', process.env.PORT || 3000);
+var server = app.listen(app.get('port'), function() {
+  console.log('Express server listening on port ' + server.address().port);
+});
+// console.log('port');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -29,6 +39,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+
+
+
+// app.use('/users', usersRouter);
+
 app.use('/posts', postsRouter)
 
 // catch 404 and forward to error handler
