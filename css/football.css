@@ -10,6 +10,7 @@
     --primary-font: 'Mulish', sans-serif;
     --primary-color: #cccccc;
     --secondary-color: #157FBC;
+    --font-color: #000000;
 }
 
 html {
@@ -21,6 +22,9 @@ main {
     font-family: var(--primary-font);
     background-color: var(--primary-color);
     font-size: 16px;  
+}
+body{
+    color: var(--font-color);
 }
 
 /*========== Previous / Next Styles==============*/
@@ -41,19 +45,19 @@ i {
 }
 
 .card-footer i {
-    color: #157fbc;
+    color: var(--primary-color);
 }
 
 a:hover{
     text-decoration: none;
 }
-
 @media all and (min-width: 0px){
     .section-header{
         font-size: 1.5rem;
         text-align: center;
         color: var(--secondary-color);
         padding: 1.5rem;
+        margin-top: 3rem;
     }
     h4{
         font-size: 1rem;
@@ -62,8 +66,10 @@ a:hover{
     .size{
         width: 100%;
     }
-    i{
+    i, i:hover{
         font-size: 1rem;
+        color: var(--secondary-color);
+
     }
 }
 

@@ -1,3 +1,6 @@
+.navbar img {
+    width: 40%;
+}
 .navbar {
     background-color: #157fbc;
 }
@@ -32,4 +35,21 @@
 #navbarResponsive a:active {
     color: #00ffc5 !important;
     text-decoration: underline;
+
+}
+@media all and (min-width: 0px){
+    .navbar-brand{
+       height: 100%;
+       width: 50%;
+    }
+}
+
+@media all and (min-width: 768px){
+    .navbar-brand{
+       height: 100%;
+       width: 10%;
+    }
+    .navbar img {
+        width: 100%;
+    }
 }
