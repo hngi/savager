@@ -1,248 +1,21 @@
-<<<<<<< HEAD
-<!-- extends layout
-
-block content
-  h1= title
-  p Welcome to #{title} -->
-
-<% include ("header") %>
-
-  <body class="left-sidebar">
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Content -->
-					<div id="content">
-						<div class="inner">
-					
-							<!-- Post -->
-								<article class="box post post-excerpt">
-									<header>
-										<!--
-											Note: Titles and subtitles will wrap automatically when necessary, so don't worry
-											if they get too long. You can also remove the <p> entirely if you don't
-											need a subtitle.
-										-->
-										<h2><a href="#">Welcome to Savager</a></h2>										
-									</header>
-									<div class="info">
-										<!--
-											Note: The date should be formatted exactly as it's shown below. In particular, the
-											"least significant" characters of the month should be encapsulated in a <span>
-											element to denote what gets dropped in 1200px mode (eg. the "uary" in "January").
-											Oh, and if you don't need a date for a particular page or post you can simply delete
-											the entire "date" element.
-											
-										-->
-										<span class="date"><span class="month">Jul<span>y</span></span> <span class="day">14</span><span class="year">, 2014</span></span>
-										<!--
-											Note: You can change the number of list items in "stats" to whatever you want.
-										-->
-										<ul class="stats">
-											<li><a href="#" class="icon fa-comment">16</a></li>
-											<li><a href="#" class="icon fa-heart">32</a></li>
-											<li><a href="#" class="icon fa-twitter">64</a></li>
-											<li><a href="#" class="icon fa-facebook">128</a></li>
-										</ul>
-									</div>
-									<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-									<p>
-										<strong>Hello!</strong> You're looking at <strong>Savager</strong>, a fully responsive HTML5 site template designed by <a href="http://n33.co">AJ</a>
-										for <a href="http://html5up.net">HTML5 UP</a> It features a clean, minimalistic design, styling for all basic page elements (including blockquotes, tables and lists), a
-										repositionable sidebar (left or right), and HTML5/CSS3 code designed for quick and easy customization (see code comments for details).
-									</p>									
-								</article>
-						
-							<!-- Post -->
-								<article class="box post post-excerpt">
-									<header>
-										<h2><a href="#">Lorem ipsum dolor sit amet</a></h2>
-										<p>Feugiat interdum sed commodo ipsum consequat dolor nullam metus</p>
-									</header>
-									<div class="info">
-										<span class="date"><span class="month">Jul<span>y</span></span> <span class="day">8</span><span class="year">, 2014</span></span>
-										<ul class="stats">
-											<li><a href="#" class="icon fa-comment">16</a></li>
-											<li><a href="#" class="icon fa-heart">32</a></li>
-											<li><a href="#" class="icon fa-twitter">64</a></li>
-											<li><a href="#" class="icon fa-facebook">128</a></li>
-										</ul>
-									</div>
-									<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-									<p>
-										Quisque vel sapien sit amet tellus elementum ultricies. Nunc vel orci turpis. Donec id malesuada metus. 
-										Nunc nulla velit, fermentum quis interdum quis, tate etiam commodo lorem ipsum dolor sit amet dolore. 
-										Quisque vel sapien sit amet tellus elementum ultricies. Nunc vel orci turpis. Donec id malesuada metus. 
-										Nunc nulla velit, fermentum quis interdum quis, convallis eu sapien. Integer sed ipsum ante.
-									</p>
-								</article>
-
-							<!-- Pagination -->
-								<div class="pagination">
-									<!--<a href="#" class="button previous">Previous Page</a>-->
-									<div class="pages">
-										<a href="#" class="active">1</a>
-										<a href="#">2</a>
-										<a href="#">3</a>
-										<a href="#">4</a>
-										<span>&hellip;</span>
-										<a href="#">20</a>
-									</div>
-									<a href="#" class="button next">Next Page</a>
-								</div>
-
-						</div>
-					</div>
-
-				<!-- Sidebar -->
-				<div id="sidebar">
-					
-					<!-- Logo -->
-						<h1 id="logo"><a href="#">Savager</a></h1>
-				
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li class="current"><a href="#">Latest Post</a></li>
-								<li><a href="#">Archives</a></li>
-								<li><a href="#">About Me</a></li>
-								<li><a href="#">Contact Me</a></li>
-							</ul>
-						</nav>
-				
-					<!-- Search -->
-						<section class="box search">
-							<form method="post" action="#">
-								<input type="text" class="text" name="search" placeholder="Search" />
-							</form>
-						</section>
-						<!-- Search ends -->
-									
-				
-					<!-- Recent Posts -->
-						<section class="box recent-posts">
-							<header>
-								<h2>Recent Posts</h2>
-							</header>
-							<ul>
-								<li><a href="#">Lorem ipsum dolor</a></li>
-								<li><a href="#">Feugiat nisl aliquam</a></li>
-								<li><a href="#">Sed dolore magna</a></li>
-								<li><a href="#">Malesuada commodo</a></li>
-								<li><a href="#">Ipsum metus nullam</a></li>
-							</ul>
-						</section>
-				
-					<!-- Recent Comments -->
-						<section class="box recent-comments">
-							<header>
-								<h2>Recent Comments</h2>
-							</header>
-							<ul>
-								<li>case on <a href="#">Lorem ipsum dolor</a></li>
-								<li>molly on <a href="#">Sed dolore magna</a></li>
-								<li>case on <a href="#">Sed dolore magna</a></li>
-							</ul>
-						</section>
-				
-					<!-- Calendar -->
-						<section class="box calendar">
-							<div class="inner">
-								<table>
-									<caption>July 2014</caption>
-									<thead>
-										<tr>
-											<th scope="col" title="Monday">M</th>
-											<th scope="col" title="Tuesday">T</th>
-											<th scope="col" title="Wednesday">W</th>
-											<th scope="col" title="Thursday">T</th>
-											<th scope="col" title="Friday">F</th>
-											<th scope="col" title="Saturday">S</th>
-											<th scope="col" title="Sunday">S</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td colspan="4" class="pad"><span>&nbsp;</span></td>
-											<td><span>1</span></td>
-											<td><span>2</span></td>
-											<td><span>3</span></td>
-										</tr>
-										<tr>
-											<td><span>4</span></td>
-											<td><span>5</span></td>
-											<td><a href="#">6</a></td>
-											<td><span>7</span></td>
-											<td><span>8</span></td>
-											<td><span>9</span></td>
-											<td><a href="#">10</a></td>
-										</tr>
-										<tr>
-											<td><span>11</span></td>
-											<td><span>12</span></td>
-											<td><span>13</span></td>
-											<td class="today"><a href="#">14</a></td>
-											<td><span>15</span></td>
-											<td><span>16</span></td>
-											<td><span>17</span></td>
-										</tr>
-										<tr>
-											<td><span>18</span></td>
-											<td><span>19</span></td>
-											<td><span>20</span></td>
-											<td><span>21</span></td>
-											<td><span>22</span></td>
-											<td><a href="#">23</a></td>
-											<td><span>24</span></td>
-										</tr>
-										<tr>
-											<td><a href="#">25</a></td>
-											<td><span>26</span></td>
-											<td><span>27</span></td>
-											<td><span>28</span></td>
-											<td class="pad" colspan="3"><span>&nbsp;</span></td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</section>
-					
-					<!-- Copyright -->
-						<ul id="copyright">
-							<!-- <li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
-						</ul>
-				
-				</div>
-
-			</div>
-		</body>
-
-		<script src="js/jquery.min.js"></script>
-			  <script src="js/skel.min.js"></script>
-			  <script src="js/skel-layers.min.js"></script>
-			  <script src="js/init.js"></script>
-		</html>
-  <!-- <% include ("footer") %> -->
-=======
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="public/https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <!-- font-awesome -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/07ba39f804.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="public/https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="public/https://kit.fontawesome.com/07ba39f804.js" crossorigin="anonymous"></script>
 
     <!-- google font -->
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:display=swap" rel="stylesheet">
+    <link href="public/https://fonts.googleapis.com/css2?family=Mulish:display=swap" rel="stylesheet">
     <!-- Custom css -->
-    <link rel="stylesheet" href="/stylesheets/home.css">
-    <link rel="stylesheet" href="/stylesheets/header.css">
-    <link rel="stylesheet" href="/stylesheets/footer.css">
+    <link rel="stylesheet" href="public/css/home.css">
+    <link rel="stylesheet" href="public/css/header.css">
+    <link rel="stylesheet" href="public/css/footer.css">
     <title>Savager | Home</title>
 </head>
 <body>
@@ -278,12 +51,12 @@ block content
         </div>
     </nav>
     <div class="container content">
-        <div class="container-fluid padding col-md-3 first">
-            <h4>Most popular meme</h4>
+        <div class="container-fluid padding col-md-4 first">
+            <h4>Most popular savage</h4>
             <div class="item item">
                 <div class="col-md-12">
                     <div class="card">
-                        <img class="card-img-top mx-auto d-block image1" src="/img/3 (5).jpg" alt="api-brand-logo">
+                        <public/img class="card-public/img-top mx-auto d-block image1" src="public/img/3 (5).jpg" alt="api-brand-logo">
                         <div class="card-body">
                             <a href=""> <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
                             <a href=""> <i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
@@ -296,7 +69,7 @@ block content
             <div class="item item">
                 <div class="col-md-12">
                     <div class="card">
-                        <img class="card-img-top mx-auto d-block image1" src="/img/6.jpg" alt="api-brand-logo">
+                        <public/img class="card-public/img-top mx-auto d-block image1" src="public/img/6.jpg" alt="api-brand-logo">
                         <div class="card-body">
                             <a href=""> <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
                             <a href=""> <i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
@@ -309,7 +82,7 @@ block content
             <div class="item item">
                 <div class="col-md-12">
                     <div class="card">
-                        <img class="card-img-top mx-auto d-block image1" src="/img/17.jpg" alt="api-brand-logo">
+                        <public/img class="card-public/img-top mx-auto d-block image1" src="public/img/17.jpg" alt="api-brand-logo">
                         <div class="card-body">
                             <a href=""> <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
                             <a href=""> <i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
@@ -327,7 +100,7 @@ block content
             <div class="item item4">
                 <div class="col-md-12">
                 <div class="card">
-                    <img class="card-img-top mx-auto d-block image1" src="/img/3 (4).jpg" alt="api-brand-logo">
+                    <public/img class="card-public/img-top mx-auto d-block image1" src="public/img/3 (4).jpg" alt="api-brand-logo">
                     <div class="card-body">
                         <a href=""> <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
                         <a href=""> <i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
@@ -339,13 +112,13 @@ block content
             </div>
         </div>
 
-        <div class="container-fluid padding col-md-9">     
+        <div class="container-fluid padding col-md-8">     
 <!-- cards -->
-            <h3>Anime Meme</h3>
+            <h3>Anime savage</h3>
             <div class="row padding" id="content">
                 <div class="col-md-4">
                     <div class="card">
-                        <img class="card-img-top mx-auto d-block image1" src="/img/2.jpg" alt="api-brand-logo">
+                        <public/img class="card-public/img-top mx-auto d-block image1" src="public/img/2.jpg" alt="api-brand-logo">
                         <div class="card-body">
                             <a href=""> <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
                             <a href=""> <i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
@@ -356,7 +129,7 @@ block content
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img class="card-img-top mx-auto d-block image1" src="/img/4.jpg" alt="api-brand-logo">
+                        <public/img class="card-public/img-top mx-auto d-block image1" src="public/img/4.jpg" alt="api-brand-logo">
                         <div class="card-body">
                             <a href=""> <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
                             <a href=""> <i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
@@ -367,7 +140,7 @@ block content
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img class="card-img-top mx-auto d-block image1" src="/img/2.jpg" alt="api-brand-logo">
+                        <public/img class="card-public/img-top mx-auto d-block image1" src="public/img/2.jpg" alt="api-brand-logo">
                         <div class="card-body">
                             <a href=""> <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
                             <a href=""> <i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
@@ -382,11 +155,11 @@ block content
             </div>
             
             <!-- card 2 -->
-            <h3>Lifestyle Meme</h3>
+            <h3>Lifestyle savage</h3>
             <div class="row padding" id="content">
                 <div class="col-md-4">
                     <div class="card">
-                        <img class="card-img-top mx-auto d-block image1" src="/img/3 (3).jpg" alt="api-brand-logo">
+                        <public/img class="card-public/img-top mx-auto d-block image1" src="public/img/3 (3).jpg" alt="api-brand-logo">
                         <div class="card-body">
                             <a href=""> <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
                             <a href=""> <i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
@@ -397,7 +170,7 @@ block content
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img class="card-img-top mx-auto d-block image1" src="/img/17.jpg" alt="api-brand-logo">
+                        <public/img class="card-public/img-top mx-auto d-block image1" src="public/img/17.jpg" alt="api-brand-logo">
                         <div class="card-body">
                             <a href=""> <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
                             <a href=""> <i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
@@ -408,7 +181,7 @@ block content
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img class="card-img-top mx-auto d-block image1" src="/img/3 (1).jpg" alt="api-brand-logo">
+                        <public/img class="card-public/img-top mx-auto d-block image1" src="public/img/3 (1).jpg" alt="api-brand-logo">
                         <div class="card-body">
                             <a href=""> <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
                             <a href=""> <i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
@@ -419,15 +192,15 @@ block content
                 </div>
             </div>
             <div class="botton">
-                <a href="#" onclick="toggleCards('this', 'more'); return false;" class="btn btn-default">View More</a>
+                <a href="#" class="btn btn-default">View More</a>
             </div>
 
              <!-- card 3 -->
-             <h3>Tech Meme</h3>
+             <h3>Tech savage</h3>
              <div class="row padding" id="content">
                  <div class="col-md-4">
                      <div class="card">
-                         <img class="card-img-top mx-auto d-block image1" src="/img/11.jpg" alt="tech meme">
+                         <public/img class="card-public/img-top mx-auto d-block image1" src="public/img/11.jpg" alt="tech meme">
                          <div class="card-body">
                              <a href=""> <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
                              <a href=""> <i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
@@ -438,7 +211,7 @@ block content
                  </div>
                  <div class="col-md-4">
                      <div class="card">
-                         <img class="card-img-top mx-auto d-block image1" src="/img/10.jpg" alt="tech meme">
+                         <public/img class="card-public/img-top mx-auto d-block image1" src="public/img/10.jpg" alt="tech meme">
                          <div class="card-body">
                              <a href=""> <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
                              <a href=""> <i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
@@ -449,7 +222,7 @@ block content
                  </div>
                  <div class="col-md-4">
                      <div class="card">
-                         <img class="card-img-top mx-auto d-block image1" src="/img/9.jpg" alt="tech meme">
+                         <public/img class="card-public/img-top mx-auto d-block image1" src="public/img/9.jpg" alt="tech meme">
                          <div class="card-body">
                              <a href=""> <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
                              <a href=""> <i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
@@ -460,7 +233,48 @@ block content
                  </div>
              </div>
              <div class="botton">
-                 <a href="#" onclick="toggleCards('this', 'more'); return false;" class="btn btn-default">View More</a>
+                 <a href="#" class="btn btn-default">View More</a>
+             </div>
+
+             <!-- card 4 -->
+             <h3>Regular savage</h3>
+             <div class="row padding" id="content">
+                 <div class="col-md-4">
+                     <div class="card">
+                         <public/img class="card-public/img-top mx-auto d-block image1" src="public/img/5.jpg" alt="tech meme">
+                         <div class="card-body">
+                             <a href=""> <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                             <a href=""> <i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
+                             <a href=""> <i class="fa fa-share" aria-hidden="true"></i></a>
+                             <a href=""> <i class="fa fa-comment" aria-hidden="true"></i></a>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-md-4">
+                     <div class="card">
+                         <public/img class="card-public/img-top mx-auto d-block image1" src="public/img/6.png" alt="tech meme">
+                         <div class="card-body">
+                             <a href=""> <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                             <a href=""> <i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
+                             <a href=""> <i class="fa fa-share" aria-hidden="true"></i></a>
+                             <a href=""> <i class="fa fa-comment" aria-hidden="true"></i></a>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-md-4">
+                     <div class="card">
+                         <public/img class="card-public/img-top mx-auto d-block image1" src="public/img/12.jpeg" alt="tech meme">
+                         <div class="card-body">
+                             <a href=""> <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                             <a href=""> <i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
+                             <a href=""> <i class="fa fa-share" aria-hidden="true"></i></a>
+                             <a href=""> <i class="fa fa-comment" aria-hidden="true"></i></a>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="botton">
+                 <a href="#" class="btn btn-default">View More</a>
              </div>
         </div>
     </div>
@@ -477,9 +291,9 @@ block content
            
            <aside class="second_block">
             <ul class="list-unstyled">
-                <li><a href="#">Home</a></li>
-                <li><a href= <%= login %> >Sign In</a></li>
-                <li><a href=<%= signup %> >Sign Up</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Sign In</a></li>
+                <li><a href="">Sign Up</a></li>
             </ul>
            </aside>
             
@@ -502,12 +316,11 @@ block content
     </section>
 
     <!-- jQuery cdn -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="public/https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <!-- icons -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="public/https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <!-- bootstrap js -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-<script src="/js/home.js"></script>
+    <script src="public/https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="public/js/home.js"></script>
 </body>
 </html>
->>>>>>> upstream/backend
