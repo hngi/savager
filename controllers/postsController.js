@@ -20,7 +20,7 @@ exports.uploadFile = async (req, res) => {
         let post = new Post({
             user_ref_id: req.user._id,
             image_url: req.imageUrl,
-            username: 'judge'
+            username: req.user.user_name
         })
     
         let user = await User.findById(req.user._id);
@@ -48,9 +48,10 @@ exports.renderPage = (req, res) => {
     res.render('upload')
 }
 
-exports.addUsers = (req, res) => {
-    Post.remove({})
-    .then(result => {
-        res.json(result);
-    })
-}
+//dev route
+// exports.addUsers = (req, res) => {
+//     Post.remove({})
+//     .then(result => {
+//         res.json(result);
+//     })
+// }

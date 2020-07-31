@@ -13,7 +13,6 @@ const uploadImage = async (req, res, next) => {
 
     const uploadedImage = await cloudinary.uploader.upload(imagePath);
     req.imageUrl = uploadedImage.secure_url;
-    req.user = { _id: '5f2479fd2490da2a9fc5625a'}
     return next();
   } catch (err) {
     return next(new Error("error uploading the file"));
