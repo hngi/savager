@@ -83,9 +83,6 @@ form{
     h4, h3{
        font-size: 1.3em; 
     }
-    h3{
-        text-align: left;
-    }
     .card-body i{
         padding: 0 7px;
         font-size: .9em;
@@ -100,10 +97,11 @@ form{
     }
     h4{
         margin-bottom: 20px;
-color: black;
+        color: black;
     }
     h3{
-        font-size: 1.8em;
+        font-size: 1.5em;
+        text-align: left;
     }
     .container-fluid{
         margin-top: 150px;
