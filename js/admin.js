@@ -3,17 +3,6 @@ $(document).ready(function () {
     'use strict';
 
     // ------------------------------------------------------- //
-    // Search Box
-    // ------------------------------------------------------ //
-    $('#search').on('click', function (e) {
-        e.preventDefault();
-        $('.search-box').fadeIn();
-    });
-    $('.dismiss').on('click', function () {
-        $('.search-box').fadeOut();
-    });
-
-    // ------------------------------------------------------- //
     // Card Close
     // ------------------------------------------------------ //
     $('.card-close a.remove').on('click', function (e) {
@@ -112,9 +101,6 @@ $(document).ready(function () {
     }
 
     
-    // ------------------------------------------------------ //
-    // For demo purposes, can be deleted
-    // ------------------------------------------------------ //
 
     var stylesheet = $('link#theme-stylesheet');
     $("<link id='new-stylesheet' rel='stylesheet'>").insertAfter(stylesheet);
