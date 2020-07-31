@@ -4,16 +4,15 @@ dotenv.config();
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
-const bcrypt = require('bcrypt')
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose  = require('mongoose');
-const ej=require('ejs')
+
 
 const indexRouter = require('./routes/indexRouter');
 const postsRouter = require('./routes/postsRouter');
-//var usersRouter = require('./routes/users');
-const authentication = require('./controllers/authentication');
+// var usersRouter = require('./routes/users');
+
 const app = express();
 
 const DB = process.env.DB;
@@ -40,14 +39,17 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', authentication);
+
 
 
 // app.use('/users', usersRouter);
 
 app.use('/posts', postsRouter)
 
- // next(createError(404));
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  next(createError(404));
+});
 
 // error handler
 app.use(function(err, req, res, next) {
