@@ -18,15 +18,22 @@
     <main>
         <div class="signup-container">
             <div class="signup-logo">
-                <img src="img/Sharehub.svg" alt="">
+               <!-- <img src="img/Sharehub.svg" alt=""> -->
             </div>
+            
             <div class="signup-content">
-                <p class="signup-header">Sign up with Sharehub</p>
-                <div class="signup-form">
-                    <form action="">
-                        <input type="text" class="form-control signup-input" placeholder='Username' required>
-                        <input type="email" class="form-control signup-input" placeholder='Email' required>
-                        <input type="password" class="form-control signup-input" placeholder='Password' required>
+                                <p class="signup-header">Sign up with Sharehub</p>
+                    <div class="signup-form">
+                    <form action="/users/signup" method="POST">
+                        <% if(data.message){ %>
+                            <div class="alert">
+                                  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                                 <%= data.message %>
+                              </div>
+                              <% } %> 
+                        <input type="text" class="form-control signup-input" name="user_name" placeholder='Username' required>
+                        <input type="email" class="form-control signup-input" name="email" placeholder='Email' required>
+                        <input type="password" class="form-control signup-input"name="password" placeholder='Password' required>
                         <input type="password" class="form-control signup-input" placeholder='Retype Password' required>
                         <div class="signup-submit d-flex justify-content-between">
                             <a href="#">Already have an account?</a>
