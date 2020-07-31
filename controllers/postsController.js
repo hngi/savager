@@ -3,20 +3,28 @@ const Post = require('../models/post');
 const User = require('../models/user');
 
 exports.allPosts = (req, res) => {
-    res.render("posts", {  title: "View All Savages" });
+
+
+    Post.find({})
+        .then(posts => {
+            console.log(posts[0].createdAt);
+            let sortedPosts = [...posts].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+            res.render('index', {posts: sortedPosts});
+        })
 }
 
 exports.uploadFile = async (req, res) => {
-    let { text } = req.body;
+    
     try {
         console.log('>>>', req.user)
         let post = new Post({
             user_ref_id: req.user._id,
             image_url: req.imageUrl,
+            username: 'judge'
         })
     
         let user = await User.findById(req.user._id);
-        console.log(user);
+        console.log('user>>>', user);
     
         post.save()
             .then(result => {
@@ -24,7 +32,7 @@ exports.uploadFile = async (req, res) => {
                 return user.save();
             })
             .then(result => {
-                res.redirect('/posts/all');
+                res.redirect('/posts');
             })
             .catch(error => {
                 console.log(error);
@@ -41,19 +49,7 @@ exports.renderPage = (req, res) => {
 }
 
 exports.addUsers = (req, res) => {
-    User.insertMany([
-        {
-            local: {
-                first_name: 'Judge',
-                last_name: 'Godwins',
-                user_name: 'judgey',
-                email: 'judgegodwins@gmail.com',
-                is_active: true,
-                password: 'test',
-                country: 'Nigeria'
-            }
-        }
-    ])
+    Post.remove({})
     .then(result => {
         res.json(result);
     })

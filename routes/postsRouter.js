@@ -9,6 +9,6 @@ router.route('/upload')
     .get(postsController.renderPage)
     .post(uploadMiddleWare, postsController.uploadFile);
     
-router.get('/user', (req, res, next) => { req.user = { id: '5f2416e0162a8029eba437c1'}; next(); }, postsController.addUsers);
+router.get('/user', (req, res, next) => { req.user = { _id: '5f24643f37108112ee6334eb'}; next(); }, postsController.addUsers);
 
 module.exports = router;
