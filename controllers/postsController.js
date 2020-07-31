@@ -1,3 +1,9 @@
+const { render } = require("../app");
+
 exports.allPosts = (req, res) => {
-    res.send("Hitting posts route");
+    res.render("posts", {  title: "View All Savages" });
+}
+
+exports.uploadFile = (req, res) => {
+    render("upload", { title: "Upload Files" });
 }
