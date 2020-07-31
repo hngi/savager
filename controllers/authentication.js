@@ -3,11 +3,12 @@ const router = express.Router()
 const User = require('../models/user')
 const bcrypt = require('bcrypt')
 const bodyParser = require('body-parser');
-const { hash } = require('bcryptjs');
+
 var urlencodedParser = bodyParser.urlencoded({ extended: true });
 
 router.get('/signup',async (req, res) => {
-    res.render("signup");
+    var data={"message":null}
+    res.render('signup',{data:data})
 
 })
 
@@ -54,12 +55,13 @@ router.post('/signup', urlencodedParser, async (req, res) => {
 
 }
 
-})
-    
+})    
 
     
-router.get('/signin',async (req, res) => {
-    res.render("login");
+router.get('/signin', async (req, res) => {
+   
+    var data={"message":null}
+    res.render('login',{data:data})
 })
 
 

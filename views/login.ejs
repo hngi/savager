@@ -16,12 +16,12 @@
         <div class="col-12  align-items-center mt-5">
              <h1 class="text-center" id="header">Please sign in</h1>
         <form action="/users/signin" method="POST" class="col-12 col-lg-3 form-group mx-auto">
-            <% if(data.message){ %>
-            <div class="alert">
-                  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-                 <%= data.message %>
-              </div>
-              <% } %> 
+            <% if( data.message!=null){ %>
+                <div class="alert">
+                      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                     <%= data.message %>
+                  </div>
+                  <% } %> 
             <input type="email" name="email" placeholder="Email address" class="form-control mb-3" required>
             <input type="password" name="password" placeholder="Password" class="form-control" required>
             <div class="row col-10 col-lg-6 mx-auto">

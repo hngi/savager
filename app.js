@@ -1,6 +1,6 @@
 
-// const dotenv = require('dotenv');
-// dotenv.config();
+const dotenv = require('dotenv');
+ dotenv.config();
 
 const createError = require('http-errors');
 const express = require('express');
@@ -9,12 +9,12 @@ const bcrypt = require('bcrypt')
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose  = require('mongoose');
-
+const ej=require('ejs')
 
 const indexRouter = require('./routes/indexRouter');
 const postsRouter = require('./routes/postsRouter');
-// var usersRouter = require('./routes/users');
-
+//var usersRouter = require('./routes/users');
+const authentication = require('./controllers/authentication');
 const app = express();
 
 const DB = process.env.DB;
@@ -30,7 +30,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-  next(createError(404));
+app.use('/users', authentication);
+
+ // next(createError(404));
 
 // error handler
 app.use(function(err, req, res, next) {
@@ -43,8 +45,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-// mongoose.connect(DB, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }, (err, db) => {
-//   if(!err && db) console.log('DB connected')
-// })
+mongoose.connect(DB, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }, (err, db) => {
+   if(!err && db) console.log('DB connected')
+ })
 
 module.exports = app;
