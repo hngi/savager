@@ -4,7 +4,7 @@ const userSchema = new schema({
     local: {
         first_name: { type: String },
         last_name: { type: String },
-        user_name: { type: String, required: true, default: "Not set" },
+        user_name: { type: String, required: true, default: "Not set", unique: true },
         email: { type: String, required: true, unique: true },
         is_active: { type: Boolean, default: 0 },
         password: { type: String },
