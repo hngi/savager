@@ -27,10 +27,6 @@ app.set('view engine', 'ejs');
 //   res.render('index');
 // })
 
-// app.set('port', process.env.PORT || 3000);
-// var server = app.listen(app.get('port'), function() {
-//   console.log('Express server listening on port ' + server.address().port);
-// });
 // console.log('port');
 
 app.use(logger('dev'));
@@ -63,9 +59,5 @@ app.use(function(err, req, res, next) {
 mongoose.connect(DB, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }, (err, db) => {
   if(!err && db) console.log('DB connected')
 })
-
-// app.listen(port, () => {
-//   console.log(`Listening on port: ${port}`);
-// })
 
 module.exports = app;
