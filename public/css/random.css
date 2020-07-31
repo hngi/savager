@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Mulish', sans-serif;
+    background-color: #ccc;
+}
+html, body{
+    overflow-x: hidden;
+}
+h1{
+    color: #157fbc;
+}
+
+.container {
+    height: calc(100% - 15px);
+}
+.card-footer i {
+    color: #157fbc;
+}
+#profile img {
+    height: 80px;
+}
+.card{
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 24px 32px rgba(0, 0, 0, 0.04);
+}
+.fa-random{
+    font-size: 2rem;
+}
+.arrows {
+    font-size: 1.5em;
+}
+blockquote p,.card-body p{
+    color: #0c0e0c;
+}
+@media (min-width: 576px){
+.card-columns {
+    column-count: 1;
+    column-gap: 1.3rem;
+}
+}
+
+@media (max-width: 330px){
+    .row h4{
+    font-size: .9rem;
+    }
+    .list-group-item{
+        padding: .75rem;
+    }
+    #profile{
+        flex-direction: column;
+        margin-top: 0 !important;
+        margin-left: 0 !important;
+        padding: 1rem ;
+        text-align: left;
+    }
+    #profile > div.ml-5{
+        margin-left: 0rem !important;
+        margin-top: 1rem;
+    }
+}
