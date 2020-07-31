@@ -3,27 +3,37 @@ const router = express.Router()
 const User = require('../models/user')
 const bcrypt = require('bcrypt')
 const bodyParser = require('body-parser');
+const { hash } = require('bcryptjs');
 var urlencodedParser = bodyParser.urlencoded({ extended: true });
+
 router.get('/signup',async (req, res) => {
     res.render("signup");
 
 })
 
 router.post('/signup', urlencodedParser, async (req, res) => {
-    console.log("hMee")
+  
     var email = req.body.email
     var userName = req.body.user_name
-    const user = await User.findOne({ local: { email: email } });
-    const userNames = await User.findOne({ local: { user_name: userName } });
+    const user = await User.findOne({ 'local.email': email } );
+   
+    const userNames = await User.findOne({ 'local.user_name': userName } );
+    
     if (user) {
-        res.write("Email is taken")
+        var data={"message":"Email is in use"}
+       res.render("signup",{data:data})
     }
     else if (userNames) {
-        res.write("User Name is taken");
+        
+        var data={"message":"Username Already exists"}
+        res.render('signup',{data:data})
     }
-    else if (!user && !userName) {
+   
+    else if (!user && !userNames) {
+        try{
+   
         const hashedPassword = await bcrypt.hash(req.body.password, 10)
-        const user = new User.create({
+        const user = await User.create({
             local: {
                 first_name: req.body.first_name,
                 user_name: req.body.user_name,
@@ -34,42 +44,55 @@ router.post('/signup', urlencodedParser, async (req, res) => {
                 country: req.body.country
             }
         })
+    console.log(user)
+    res.render("login")
     }
-    await user.save((err, success) => {
-        
-        if (err) {
-            res.status(500).json({
-                status: "fail",
-                message: "Error establishing database connection"
-            });
-            res.write("Error establishing database connection")
-        } else if (success) {
-           
-                    res.render("signin");
-        }
 
+    catch(e){
+    res.send(e.message)
+    }
 
-    })
-    
+}
 
 })
+    
+
+    
+router.get('/signin',async (req, res) => {
+    res.render("login");
+})
+
+
 router.post('/signin', urlencodedParser, async (req, res) => {
     var email = req.body.email
-    const user = await User.findOne({ local: { email: email } });
-    if (!user) {
-        res.write("Cannot find user")
-        return res.status(400).send('Cannot find user')
+    
+    const uSer = await User.findOne({ 'local.email': email })
+    
+    if (!uSer) {
+        var data={"message":"Cannot find user"}
+        res.render('login',{data:data})
    }
-    else if (user) {
-        if (await bcrypt.compare(req.body.password, user.password)) {
-            res.write("Login Successful")
-            res.send('Success')
+    else if (uSer) {
+       // const passWord= user.password
+       const dat= uSer.local
+        console.log(dat.password)
+        try{
+       
+       const match=await bcrypt.compare(req.body.password,dat.password)
+        if (match) {
+            //res.write("Login Successful")
+             
+             res.send('Success')
         } else {
-            res.write("Incorrect Password")
-            res.send('Not Allowed')
-
+          //  console.log(uSer)
+           // res.write("Incorrect Password")
+           var data={"message":"Incorrect Password"}
+           res.render('login',{data:data})
         }
-
+        }
+catch(e){
+    res.send(e.message)
+}
     }
 })
 module.exports=router;
