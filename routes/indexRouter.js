@@ -6,6 +6,8 @@ var router = express.Router();
 const indexController = require("../controllers/indexController");
 
 router.get('/', indexController.viewTest);
+router.get('/login', indexController.signinView);
+router.get('/signup', indexController.signupView);
 
 
 
