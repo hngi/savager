@@ -14,42 +14,49 @@
     <link href="https://fonts.googleapis.com/css2?family=Mulish:display=swap" rel="stylesheet">
     <!-- Custom css -->
     <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/headerr.css">
     <link rel="stylesheet" href="css/footer.css">
     <title>Savager | Home</title>
 </head>
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
         <div class="container">
-         <a class="navbar-brand" href="#top"><span class="">SAVAGER</span> </a>
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon" role="button"></span>
+          <a class="col-7 col-md-3 col-lg-2 navbar-brand" href="#top"><img class="img-fluid w-75" src="./img/savagecollector-logo.png"
+              alt="Savage Collection Logo"> </a>
+    
+    
+          <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" role="button"></span>
           </button>
-         
-         <div class="collapse navbar-collapse" id="navbarResponsive">
-             <ul class="navbar-nav ml-auto">
-                 <li class="nav-items"><a href="#" class="nav-link">Home</a></li>
-                 <li class="nav-items"><a href="" class="nav-link">About</a></li>
-                 <li class="nav-items"><a href="" class="nav-link">Top Rated</a></li>
-                 <li class="nav-items"><a href="#" class="nav-link">Newest</a></li>
-                 <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Savage</a>
-                    <a class="dropdown-item" href="#">Stand Up</a>
-                    <a class="dropdown-item" href="#">Dank Memes</a>
-                  </div>
-                 </li>
-                 <li class="nav-items"><a href="#" class="nav-link">Contact Us</a></li>
-                 <form class="form-inline">
-                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn-primary nav_button my-2 my-sm-0" type="submit">Search</button>
-                </form>
-             </ul>
-         </div>
-         
+    
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-items"><a href="#" class="nav-link">Home</a></li>
+              <li class="nav-items"><a href="#" class="nav-link">About</a></li>
+              <li class="nav-items"><a href="#" class="nav-link">Top Rated</a></li>
+              <li class="nav-items"><a href="#" class="nav-link">Newest</a></li>
+    
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">Categories</a>
+                <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item " href="#">Savage</a>
+                  <a class="dropdown-item " href="#">Stand Up</a>
+                  <a class="dropdown-item " href="#">Dank Memes</a>
+                </div>
+              </li>
+    
+              <li class="nav-items"><a href="#" class="nav-link">Contact Us</a></li>
+              <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn nav_button my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </ul>
+          </div>
+    
         </div>
-    </nav>
+      </nav>
     <div class="container content">
         <div class="container-fluid padding col-md-4 first">
             <h4>Most popular savage</h4>
@@ -280,40 +287,45 @@
     </div>
 
     <!-- footer -->
-    <section>
-        <div class="container py-3 footer_grid">
-          <aside class="first_block">
-           <ul class="list-unstyled">
-               <li><a href="">SAVAGER</a></li>
-               
-           </ul>
-          </aside>
-           
-           <aside class="second_block">
-            <ul class="list-unstyled">
-                <li><a href="">Home</a></li>
-                <li><a href="">Sign In</a></li>
-                <li><a href="">Sign Up</a></li>
-            </ul>
-           </aside>
-            
-            <aside class="third_block">
-            <ul class="list-unstyled">
-                <li><a href="">Newest</a></li>
-                <li><a href="">Popular</a></li>
-                <li><a href="">Top 50</a></li>
-            </ul>
-            </aside>
-            
-            <div class="email_form">
-                  <p>Get Notified</p>
-                  <form action="" method="" class="form-group in_display">
-                      <input type="email" placeholder="Email" class="form-control vanish" name="email">
-                      <button type="submit" name="submit" class="subscribe_button text-white"><span>Subscribe</span></button>
-                  </form>
-            </div>
-        </div>
-    </section>
+    <div class="footer-container">
+		<div class="container footer-wrapper">
+			<div class="logo-social">
+				<img src="img/logo.jpg" alt="">
+				<div class="footer-form-social">
+				  <a href="" class="footer-facebook footer-social"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+				  <a href="" class="footer-twitter footer-social"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+				  <a href="" class="footer-google footer-social"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+			  </div>
+			</div>
+			<div class="pages d-flex">
+				<ul>
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<li>
+						<a href="signup.html">Signup</a>
+					</li>
+					<li>
+						<a href="login.html">Login</a>
+					</li>
+				</ul>
+				
+				
+				 <ul class="list-unstyled">
+					 <li><a href="">Newest</a></li>
+					 <li><a href="/Leaderboard.html">Leaderboard</a></li>
+					 <li><a href="/football.html">Football</a></li>
+				 </ul>
+				
+				 
+				 
+				 <ul class="list-unstyled">
+					 <li><a href="/random.html">Sections</a></li>
+					 <li><a href="/country_sec.html">Country Memes</a></li>
+					 <li><a href="/views.html">Views</a></li>
+				 </ul>
+			</div>
+		</div>
 
     <!-- jQuery cdn -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
