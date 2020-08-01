@@ -99,6 +99,13 @@ p {
     background-size: cover;
     position: relative;
     min-height: inherit;
+    margin-top:76px
+}
+/* On screens that are 990px wide or less*/
+@media screen and (max-width: 990px) {
+    .hero-section .splash {
+        margin-top:86px;
+    }
 }
 .hero-section .wallet {
     font-size: 60px;
@@ -128,5 +135,6 @@ p {
 }
 .recent-earning-section .preview-description a {
     font-size: 13px;
-    font-weight: 200;
+    font-weight: 400;
+    color: #157fbc;
 }
