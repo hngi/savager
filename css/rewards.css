@@ -12,22 +12,19 @@ body {
 }
 /* SCROLL BAR */
 body::-webkit-scrollbar {
-    width: 6px;               /* width of the entire scrollbar */
+    width: 6px;                           /* width of the entire scrollbar */
 }
 body::-webkit-scrollbar-track {
     background: #01707100;
 }
 body::-webkit-scrollbar-thumb {
     background-color: rgb(204 204 204);    /* color of the scroll thumb */
-    border-radius:5%;           /* roundness of the scroll thumb */
+    border-radius:5%;                      /* roundness of the scroll thumb */
     margin-right:1px;
 }
 
-/*  MENU FIX */
-#navbarResponsive a:hover {
-    font-weight: initial;
-}
-/* END MENU FIX */
+
+/*  GENERAL STYLING */
 p {
     font-weight: 300;
 }
@@ -88,6 +85,40 @@ p {
 .bg-color5 {
     background-color: #ccc;
 }
+
+
+/*  MENU FIX - OVERRIDE */
+#navbarResponsive a:hover {
+    font-weight: initial;
+}
+.navbar-section .nav_button {
+    border: 1px solid #ffffff;
+    color: #fff;
+    border-left: 0px;
+}
+.navbar-section .nav_button:hover {
+    color: #ffffff;
+    background-color: #005c90;
+}
+.navbar-section .form-control {
+    color: #707070;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0rem;
+    border-right: 0px;
+    height: 31px;
+}
+.navbar-section .btn {
+    border-radius: 0rem;
+    font-size: x-small;
+    padding: .375rem .75rem;
+    height: 31px;
+}
+.navbar-section .navbar img {
+    width: 40%;
+}
+
+/* HERO SECTION STYLE */
 .hero-section {
     background-image: url(../img/reward-hero2.jpg);
     height: 100%;
@@ -108,16 +139,18 @@ p {
 /* On screens that are 990px wide or less*/
 @media screen and (max-width: 990px) {
     .hero-section .splash {
-        margin-top:86px;
+        margin-top:60px;
     }
 }
 .hero-section .wallet {
-    font-size: 60px;
+    font-size: 56px;
 }
 .hero-section sup {
   vertical-align: text-bottom;
 }
 
+
+/* RECENT EARNINGS SECTION STYLE */
 .recent-earning-section {
     padding: 2rem 0rem;
 }
@@ -141,4 +174,10 @@ p {
     font-size: 13px;
     font-weight: 400;
     color: #157fbc;
+}
+
+
+/*  FOOTER SECTION  */
+.footer-section .logo-social img {
+    width: 4rem;
 }
