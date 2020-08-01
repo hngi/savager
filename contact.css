@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 body    {
-    background: #eef3f6;;
+    background: #eef3f6;
+    font-family: 'Mulish';
 }
 #contact-container  {
     background: white;
@@ -12,4 +13,7 @@ body    {
     border-radius: 10px;
     margin: 10% auto;
     
+}
+#contact-form input, #contact-form textarea {
+    background-color: #f6f9fb;
 }
