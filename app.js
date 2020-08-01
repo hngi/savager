@@ -16,7 +16,6 @@ const indexRouter = require('./routes/indexRouter');
 const postsRouter = require('./routes/postsRouter');
 //var usersRouter = require('./routes/users');
 const authentication = require('./controllers/authentication');
-const dashboard = require('./controllers/dashboard');
 const app = express();
 
 const sessionStore = new MongoStore({
@@ -61,7 +60,6 @@ app.use('/users', authentication);
 // app.use('/users', usersRouter);
 
 app.use('/posts', postsRouter)
-app.get('/dashboard', dashboard);
 
  // next(createError(404));
 
