@@ -7,7 +7,7 @@ exports.viewTest = (req, res) => {
     res.render('index');
 }
 
-exports.loginView = (req, res) => {
+exports.signinView = (req, res) => {
     res.render('login', { title: 'Login', error: null });
 }
 
