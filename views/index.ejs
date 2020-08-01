@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,7 +18,6 @@
     <link rel="stylesheet" href="css/footer.css">
     <title>Savager | Home</title>
 </head>
-
 <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light">
         <div class="container">
@@ -60,9 +57,9 @@
                     </form>
                 </ul>
             </div>
-
         </div>
-    </nav>
+      </nav>
+      
     <div class="container content">
 
         <!-- cards -->
@@ -92,59 +89,222 @@
             <a href="#" onclick="toggleCards('this', 'more'); return false;" id="view-more" class="btn btn-default">View
                 More</a>
         </div>
+        <% if(posts.length == 0) { %>
+            <div class="container-fluid padding col-md-8">     
+                <!-- cards -->
+                <h3>Anime savage</h3>
+                <div class="row padding" id="content">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top mx-auto d-block image1" src="img/2.jpg" alt="api-brand-logo">
+                            <div class="card-body">
+                                <a href=""> <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-share" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-comment" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top mx-auto d-block image1" src="img/4.jpg" alt="api-brand-logo">
+                            <div class="card-body">
+                                <a href=""> <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-share" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-comment" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top mx-auto d-block image1" src="img/2.jpg" alt="api-brand-logo">
+                            <div class="card-body">
+                                <a href=""> <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-share" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-comment" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="botton">
+                    <a href="#" onclick="toggleCards('this', 'more'); return false;" id="view-more" class="btn btn-default">View More</a>
+                </div>
+                
+                <!-- card 2 -->
+                <h3>Lifestyle savage</h3>
+                <div class="row padding" id="content">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top mx-auto d-block image1" src="img/3 (3).jpg" alt="api-brand-logo">
+                            <div class="card-body">
+                                <a href=""> <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-share" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-comment" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top mx-auto d-block image1" src="img/17.jpg" alt="api-brand-logo">
+                            <div class="card-body">
+                                <a href=""> <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-share" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-comment" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top mx-auto d-block image1" src="img/3 (1).jpg" alt="api-brand-logo">
+                            <div class="card-body">
+                                <a href=""> <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-share" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-comment" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="botton">
+                    <a href="#" class="btn btn-default">View More</a>
+                </div>
 
+                <!-- card 3 -->
+                <h3>Tech savage</h3>
+                <div class="row padding" id="content">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top mx-auto d-block image1" src="img/11.jpg" alt="tech meme">
+                            <div class="card-body">
+                                <a href=""> <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-share" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-comment" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top mx-auto d-block image1" src="img/10.jpg" alt="tech meme">
+                            <div class="card-body">
+                                <a href=""> <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-share" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-comment" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top mx-auto d-block image1" src="img/9.jpg" alt="tech meme">
+                            <div class="card-body">
+                                <a href=""> <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-share" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-comment" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="botton">
+                    <a href="#" class="btn btn-default">View More</a>
+                </div>
+
+                <!-- card 4 -->
+                <h3>Regular savage</h3>
+                <div class="row padding" id="content">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top mx-auto d-block image1" src="img/5.jpg" alt="tech meme">
+                            <div class="card-body">
+                                <a href=""> <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-share" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-comment" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top mx-auto d-block image1" src="img/6.png" alt="tech meme">
+                            <div class="card-body">
+                                <a href=""> <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-share" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-comment" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top mx-auto d-block image1" src="img/12.jpeg" alt="tech meme">
+                            <div class="card-body">
+                                <a href=""> <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-share" aria-hidden="true"></i></a>
+                                <a href=""> <i class="fa fa-comment" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="botton">
+                    <a href="#" class="btn btn-default">View More</a>
+                </div>
+            </div>
+        <% } %>
     </div>
 
     <!-- footer -->
-    <section>
-        <div class="container py-3 footer_grid">
-            <aside class="first_block">
-                <ul class="list-unstyled">
-                    <li><a href="">SAVAGER</a></li>
-
-                </ul>
-            </aside>
-
-            <aside class="second_block">
-                <ul class="list-unstyled">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="/login">Sign In</a></li>
-                    <li><a href="/signup">Sign Up</a></li>
-                </ul>
-            </aside>
-
-            <aside class="third_block">
-                <ul class="list-unstyled">
-                    <li><a href="">Newest</a></li>
-                    <li><a href="">Popular</a></li>
-                    <li><a href="">Top 50</a></li>
-                </ul>
-            </aside>
-
-            <div class="email_form">
-                <p>Get Notified</p>
-                <form action="" method="" class="form-group in_display">
-                    <input type="email" placeholder="Email" class="form-control vanish" name="email">
-                    <button type="submit" name="submit"
-                        class="subscribe_button text-white"><span>Subscribe</span></button>
-                </form>
-            </div>
-        </div>
-    </section>
+    <div class="footer-container">
+		<div class="container footer-wrapper">
+			<div class="logo-social">
+				<img src="img/logo.jpg" alt="">
+				<div class="footer-form-social">
+				  <a href="" class="footer-facebook footer-social"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+				  <a href="" class="footer-twitter footer-social"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+				  <a href="" class="footer-google footer-social"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+			  </div>
+			</div>
+			<div class="pages d-flex">
+				<ul>
+					<li>
+						<a href="/">Home</a>
+					</li>
+					<li>
+						<a href="/signup">Signup</a>
+					</li>
+					<li>
+						<a href="/login">Login</a>
+					</li>
+				</ul>
+				
+				
+				 <ul class="list-unstyled">
+					 <li><a href="/">Newest</a></li>
+					 <li><a href="/leaderboard">Leaderboard</a></li>
+					 <li><a href="/football">Football</a></li>
+				 </ul>
+				
+				 
+				 
+				 <ul class="list-unstyled">
+					 <li><a href="/random">Sections</a></li>
+					 <li><a href="/country_sec">Country Memes</a></li>
+					 <li><a href="/views">Views</a></li>
+				 </ul>
+			</div>
+		</div>
 
     <!-- jQuery cdn -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <!-- icons -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <!-- bootstrap js -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
-    <script src="js/home.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="js/home.js"></script>
 </body>
-
 </html>
