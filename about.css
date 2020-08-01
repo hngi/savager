@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 body    {
-    background: #eef3f6;;
+    background: #eef3f6;
+    font-family: 'Mulish';
 }
 #contact-container  {
    
