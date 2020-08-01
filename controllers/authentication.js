@@ -85,6 +85,6 @@ router.post('/login', urlencodedParser, async (req, res) => {
 })
 
 router.get('/dashboard',(req, res) => {
-    res.render("user_dashboard")
+    res.render("admin_dashboard")
 })
 module.exports=router;
