@@ -3,7 +3,7 @@ const router = express.Router()
 const User = require('../models/user')
 const bcrypt = require('bcrypt')
 const bodyParser = require('body-parser');
-
+const dashboard = require('./dashboard');
 var urlencodedParser = bodyParser.urlencoded({ extended: true });
 
 router.get('/signup',async (req, res) => {
@@ -91,7 +91,7 @@ router.post('/login', urlencodedParser, async (req, res) => {
                     _id: user._id
                 }
 
-                res.redirect('/');
+                res.redirect('/users/dashboard');
             } else {
             //  console.log(uSer)
             // res.write("Incorrect Password")
@@ -106,7 +106,5 @@ router.post('/login', urlencodedParser, async (req, res) => {
     
 })
 
-router.get('/dashboard',(req, res) => {
-    res.render("user_dashboard")
-})
+router.get('/dashboard', dashboard)
 module.exports=router;
