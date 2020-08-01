@@ -22,86 +22,50 @@ body{
     font-family: var(--ff-primary);
     background-color: #eef3f6;
     color: #1e1633;
-    font-size: var(--fs-foot);
 }
-
-a,
-a:hover,
-a:active{
-    text-decoration: none;
-}
-
 
 p{
     margin: 0;
 }
 
-.login-container{
+.signin-container{
     margin: 5rem auto 8rem;
     max-width: 25rem;
     text-align: center;
 }
 
-.login-content{
+.signin-content{
     background-color: #ffffff;
-    padding: 0 2rem;
+    padding: 1rem 2rem;
     border-radius: 0.3rem;
 }
 
-.login-logo{
+.signin-logo{
     margin-bottom: 3rem;
 }
 
-.login-logo img{
+.signin-logo img{
     width: 3rem;
 }
 
-.login-header{
+.signin-header{
     padding: 2rem 0;
 }
 
-.login-form input{
+.signin-form input{
     margin-bottom: 1.5rem;
     background-color: #f6f9fb;
     border-radius: 0.35rem;
 }
 
-.login-input{
+.signup-input{
     font-size: var(--fs-foot);
     padding: 0.3rem 0.9rem;
 }
 
-.login-copy{
-    position: relative;
-    width: 100%;
-}
 
-.login-copy a{
-    position: absolute;
-    display: block;
-    min-width: 64px;
-    top: 5px;
-    bottom: 5px;
-    right: 5px;
-    background-color: #9fa3ac;
-    color: #ffffff;
-    border-radius: 6px;
-    justify-content: center;
-    align-items: center;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-transition: 0.7s;
-    -o-transition: 0.7s;
-    transition: 0.7s;
-}
 
-.login-submit a{
-    color: #1e1633;
-}
-
-.login-button{
+.signin-button{
     background-color: #3482e2;
     color: #ffffff;
     padding: 0.3rem 2rem;
@@ -109,46 +73,6 @@ p{
     border-radius: 0.25rem;
     font-size: var(--fs-foot);
 }
+© 2020 GitHub, Inc.
 
-.login-form-footer{
-    border-top: solid 1px #e6e9f1;
-}
 
-.login-social{
-    border-radius: 50%;
-    backface-visibility: hidden;
-    width: 1.5rem;
-    height: 1.5rem;
-    margin: 0.355rem;
-    justify-content: center;
-    align-items: center;
-    display: -moz-inline-box;
-    display: -ms-inline-flexbox;
-    display: -webkit-inline-flex;
-    display: inline-flex;
-    -webkit-transition: 0.7s;
-    -o-transition: 0.7s;
-    transition: 0.7s;
-}
-
-.login-facebook{
-    background-color: #3b5998;
-    color: #ffffff;
-}
-
-.login-twitter{
-    background-color: #55acee;
-    color: #ffffff;
-}
-
-.login-google{
-    background-color: #dd4b39;
-    color: #ffffff;
-}
-
-.login-form-social a,
-.login-form-social a:hover,
-.login-form-social a:active{
-    color: #ffffff;
-    text-decoration: none;
-}
