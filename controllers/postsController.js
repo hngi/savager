@@ -5,7 +5,6 @@ const User = require('../models/user');
 exports.allPosts = (req, res) => {
     Post.find({})
         .then(posts => {
-            console.log(posts);
             let sortedPosts;
             if(posts) {
                 sortedPosts = [...posts].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
@@ -13,7 +12,7 @@ exports.allPosts = (req, res) => {
             res.render('index', {posts: sortedPosts || posts, user: req.session.user});
         })
         .catch(err => {
-            res.render('index', {posts: []});
+            res.render('index', {posts: [], user: null});
 
         })
 }
@@ -40,17 +39,15 @@ exports.uploadFile = async (req, res) => {
                 res.redirect('/posts');
             })
             .catch(error => {
-                console.log(error);
-                res.render('uploads', { error })
+                res.render('uploads', { error: "Error uploading file" })
             });
     } catch(error) {
-        console.log(error)
-        res.render('uploads', { error });
+        res.render('uploads', { error: "Error uploading file" });
     }
 }
 
 exports.renderPage = (req, res) => {
-    res.render('upload')
+    res.render('upload', {error: null});
 }
 
 // dev route
