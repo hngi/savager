@@ -91,7 +91,7 @@ router.post('/login', urlencodedParser, async (req, res) => {
                     _id: user._id
                 }
 
-                res.redirect('/users/dashboard');
+                res.redirect('/');
             } else {
             //  console.log(uSer)
             // res.write("Incorrect Password")
