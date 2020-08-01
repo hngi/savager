@@ -16,13 +16,18 @@ body::-webkit-scrollbar {
 }
 body::-webkit-scrollbar-track {
     background: #01707100;
-        /* color of the tracking area */
 }
 body::-webkit-scrollbar-thumb {
-    background-color: rgba(92, 139, 221, 0.48);    /* color of the scroll thumb */
-    border-radius:50%;           /* roundness of the scroll thumb */
+    background-color: rgb(204 204 204);    /* color of the scroll thumb */
+    border-radius:5%;           /* roundness of the scroll thumb */
     margin-right:1px;
 }
+
+/*  MENU FIX */
+#navbarResponsive a:hover {
+    font-weight: initial;
+}
+/* END MENU FIX */
 p {
     font-weight: 300;
 }
@@ -83,7 +88,6 @@ p {
 .bg-color5 {
     background-color: #ccc;
 }
-
 .hero-section {
     background-image: url(../img/reward-hero2.jpg);
     height: 100%;
