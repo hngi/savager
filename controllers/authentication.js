@@ -43,10 +43,18 @@ router.post('/signup', urlencodedParser, async (req, res) => {
                 is_active: 1,
                 password: hashedPassword,
                 country: req.body.country
-            }
+            },
+            points: 0
         })
-    console.log(user)
-    res.render("login")
+        
+        req.session.user = {
+            email: user.local.email,
+            user_name: user.local.user_name,
+            _id: user._id
+        }
+        console.log(user)
+        res.send('success')
+        // res.render("login")
     }
 
     catch(e){
@@ -68,23 +76,30 @@ router.get('/signin', async (req, res) => {
 router.post('/signin', urlencodedParser, async (req, res) => {
     var email = req.body.email
     
-    const uSer = await User.findOne({ 'local.email': email })
+    const user = await User.findOne({ 'local.email': email })
     
-    if (!uSer) {
+    if (!user) {
         var data={"message":"Cannot find user"}
         res.render('login',{data:data})
    }
-    else if (uSer) {
+    else if (user) {
        // const passWord= user.password
-       const dat= uSer.local
+       console.log(user);
+       const dat= user.local
         console.log(dat.password)
         try{
        
        const match=await bcrypt.compare(req.body.password,dat.password)
         if (match) {
             //res.write("Login Successful")
-             
-             res.send('Success')
+            req.session.user = {
+                email: user.local.email,
+                user_name: user.local.user_name,
+                _id: user._id
+            }
+
+            console.log('>>> user', req.session.user)
+            res.send('Success')
         } else {
           //  console.log(uSer)
            // res.write("Incorrect Password")
