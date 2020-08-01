@@ -16,16 +16,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Mulish:display=swap" rel="stylesheet">
     <!-- Custom css -->
     <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/headerr.css">
     <link rel="stylesheet" href="css/footer.css">
     <title>Savager | Home</title>
 </head>
 
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="#top"><span class="">SAVAGER</span> </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            <a class="col-7 col-md-3 col-lg-2 navbar-brand" href="#top"><img class="img-fluid w-75"
+                    src="./img/savagecollector-logo.png" alt="Savage Collection Logo"> </a>
+
+
+            <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon" role="button"></span>
             </button>
@@ -33,26 +36,27 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-items"><a href="#" class="nav-link">Home</a></li>
-                    <%if(user) { %>
-                        <li class="nav-items"><a href="/posts/upload" class="nav-link">Upload</a></li>
-                    <%}%>
-                    <li class="nav-items"><a href="" class="nav-link">Top Rated</a></li>
+                    <li class="nav-items"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-items"><a href="#" class="nav-link">Top Rated</a></li>
                     <li class="nav-items"><a href="#" class="nav-link">Newest</a></li>
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">Categories</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Savage</a>
-                            <a class="dropdown-item" href="#">Stand Up</a>
-                            <a class="dropdown-item" href="#">Dank Memes</a>
+                        <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item " href="#">Savage</a>
+                            <a class="dropdown-item " href="#">Stand Up</a>
+                            <a class="dropdown-item " href="#">Dank Memes</a>
                         </div>
                     </li>
-                    <%if(!user) { %>
+                    <%if(user) { %>
+                        <li class="nav-items"><a href="/posts/upload" class="nav-link">Upload</a></li>
+                    <%} else {%>
                         <li class="nav-items"><a href="/users/signup" class="nav-link">Sign Up</a></li>
                     <% } %>
                     <form class="form-inline">
                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn-primary nav_button my-2 my-sm-0" type="submit">Search</button>
+                        <button class="btn nav_button my-2 my-sm-0" type="submit">Search</button>
                     </form>
                 </ul>
             </div>
@@ -82,8 +86,8 @@
                 </div>
                 <%});%>
             <%}%>
-
         </div>
+        
         <div class="botton">
             <a href="#" onclick="toggleCards('this', 'more'); return false;" id="view-more" class="btn btn-default">View
                 More</a>

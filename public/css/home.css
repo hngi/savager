@@ -17,7 +17,7 @@ h4{
     margin-bottom: 20px;
     text-align: center;
     text-decoration: underline #157fbc;
-
+    color: black;
 }
 h3{
     color: #157fbc;
@@ -34,7 +34,6 @@ h3{
     color: #ccc;
     padding: 0 12px;
     text-align: center;
-    font-style: 1.2em !important;
 }
 .card-body i:hover{
     color: #157fbc;
@@ -49,6 +48,9 @@ h3{
     color:#fff !important;
     margin-top: 20px;
     box-shadow: 0px 0px 0.569767px rgba(43, 39, 80, 0.04), 0px 2.27907px 4.55814px rgba(43, 39, 80, 0.04), 0px 9.11628px 13.6744px rgba(43, 39, 80, 0.04), 0px 13.6744px 18.2326px rgba(43, 39, 80, 0.04);
+}
+.botton .btn:hover{
+color: #00ffc5 !important;
 }
 form{
     text-align: center;
@@ -81,9 +83,6 @@ form{
     h4, h3{
        font-size: 1.3em; 
     }
-    h3{
-        text-align: left;
-    }
     .card-body i{
         padding: 0 7px;
         font-size: .9em;
@@ -98,12 +97,14 @@ form{
     }
     h4{
         margin-bottom: 20px;
+        color: black;
     }
     h3{
-        font-size: 1.8em;
+        font-size: 1.5em;
+        text-align: left;
     }
     .container-fluid{
-        margin-top: 100px;
+        margin-top: 150px;
     }
     .card-body i{
         padding: 15px;
