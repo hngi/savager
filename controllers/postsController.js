@@ -10,7 +10,7 @@ exports.allPosts = (req, res) => {
             if(posts) {
                 sortedPosts = [...posts].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
             }
-            res.render('index', {posts: [], user: req.session.user});
+            res.render('index', {posts: sortedPosts || posts, user: req.session.user});
         })
         .catch(err => {
             res.render('index', {posts: []});
