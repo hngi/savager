@@ -4,9 +4,10 @@ var router = express.Router();
 /* GET home page. */
 
 const indexController = require("../controllers/indexController");
+const postsController = require('../controllers/postsController')
 
-router.get('/', indexController.viewTest);
-router.get('/login', indexController.loginView);
+router.get('/', postsController.allPosts);
+router.get('/login', indexController.signinView);
 router.get('/signup', indexController.signupView);
 router.get('/aboutus', indexController.aboutUsView);
 router.get('/contact', indexController.contactUsView);

@@ -38,8 +38,16 @@ router.post('/signup', urlencodedParser, async (req, res) => {
                         is_active: 1,
                         password: hashedPassword,
                         country: req.body.country
-                    }
+                    },
+                    points: 0
                 })
+
+                req.session.user = {
+                    email: user.local.email,
+                    user_name: user.local.user_name,
+                    _id: user._id
+                };
+
                 res.redirect("/users/dashboard")
             }
             catch(e){
@@ -62,26 +70,37 @@ router.get('/login', async (req, res) => {
 router.post('/login', urlencodedParser, async (req, res) => {
     let email = req.body.email;
     let userName = req.body.user_name;
+
+    try {
+        const user = await User.findOne({ 'local.email': email })
     
-    const user = await User.findOne({ 'local.user_name': userName })
-    
-    if (!user) {
-        res.render('login',{error:"Invalid credentials"})
-   }
-    else if (user) {
-       // const passWord= user.password
-       const match=await bcrypt.compare(req.body.password,user.local.password)
-        if (match) {
-            //res.write("Login Successful")
-             
-             res.redirect('/users/dashboard');
-        } else {
-          //  console.log(uSer)
-           // res.write("Incorrect Password")
-           var data={"message":"Incorrect Password"}
-           res.render('login',{error:"Invalid credentials"})
+        if (!user) {
+            var data={"message":"Cannot find user"}
+            res.render('login',{error:"Invalid credentials"})
         }
+        else if (user) {
+            const match=await bcrypt.compare(req.body.password,dat.password)
+            if (match) {
+                //res.write("Login Successful")
+                req.session.user = {
+                    email: user.local.email,
+                    user_name: user.local.user_name,
+                    _id: user._id
+                }
+
+                res.redirect('/users/dashboard');
+            } else {
+            //  console.log(uSer)
+            // res.write("Incorrect Password")
+            var data={"message":"Incorrect Password"}
+            res.render('login',{error:"Invalid credentials"})
+            }
+        }
+    } catch (error) {
+        res.render('login',{error:"Error Occured"})
     }
+    
+    
 })
 
 router.get('/dashboard',(req, res) => {

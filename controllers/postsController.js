@@ -6,8 +6,11 @@ exports.allPosts = (req, res) => {
     Post.find({})
         .then(posts => {
             console.log(posts);
-            let sortedPosts = [...posts].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-            res.render('index', {posts: sortedPosts});
+            let sortedPosts;
+            if(posts) {
+                sortedPosts = [...posts].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+            }
+            res.render('index', {posts: sortedPosts || posts, user: req.session.user});
         })
         .catch(err => {
             res.render('index', {posts: []});
@@ -18,15 +21,15 @@ exports.allPosts = (req, res) => {
 exports.uploadFile = async (req, res) => {
     
     try {
-        console.log('>>>', req.user)
         let post = new Post({
-            user_ref_id: req.user._id,
+            user_ref_id: req.session.user._id,
             image_url: req.imageUrl,
-            username: req.user.user_name
+            username: req.session.user.user_name
         })
-    
-        let user = await User.findById(req.user._id);
-        console.log('user>>>', user);
+
+        // console.log('id >>>', req.session.user._id)
+        let user = await User.findById(req.session.user._id);
+        // console.log('user>>>', user);
     
         post.save()
             .then(result => {
@@ -50,8 +53,9 @@ exports.renderPage = (req, res) => {
     res.render('upload')
 }
 
-//dev route
+// dev route
 // exports.addUsers = (req, res) => {
+//     console.log('>>id ', req.session.user);
 //     Post.remove({})
 //     .then(result => {
 //         res.json(result);

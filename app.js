@@ -8,13 +8,30 @@ const bcrypt = require('bcrypt')
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose  = require('mongoose');
-const ej=require('ejs')
+const ej=require('ejs');
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
 
 const indexRouter = require('./routes/indexRouter');
 const postsRouter = require('./routes/postsRouter');
 //var usersRouter = require('./routes/users');
 const authentication = require('./controllers/authentication');
 const app = express();
+
+const sessionStore = new MongoStore({
+  mongooseConnection: mongoose.connection
+});
+
+const sess = {
+  secret: process.env.SECRET || 'secret',
+  store: sessionStore,
+  resave: true,
+  saveUninitialized: false,
+  cookie: {
+    path: '/',
+    maxAge: 1000 * 60 * 60 * 24 * 30
+  }
+}
 
 const DB = process.env.DB;
 // const port = process.env.PORT || 3000;
@@ -34,6 +51,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session(sess));
 
 app.use('/', indexRouter);
 app.use('/users', authentication);
