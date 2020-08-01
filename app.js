@@ -16,6 +16,7 @@ const indexRouter = require('./routes/indexRouter');
 const postsRouter = require('./routes/postsRouter');
 //var usersRouter = require('./routes/users');
 const authentication = require('./controllers/authentication');
+const dashboard = require('./controllers/dashboard');
 const app = express();
 
 const sessionStore = new MongoStore({
@@ -60,6 +61,7 @@ app.use('/users', authentication);
 // app.use('/users', usersRouter);
 
 app.use('/posts', postsRouter)
+app.get('/dashboard', dashboard);
 
  // next(createError(404));
 
@@ -70,6 +72,7 @@ app.use(function(err, req, res, next) {
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
   // render the error page
+  console.log(err);
   res.status(err.status || 500);
   res.render('error');
 });
