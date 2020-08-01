@@ -3,13 +3,15 @@ const Post = require('../models/post');
 const User = require('../models/user');
 
 exports.allPosts = (req, res) => {
-
-
     Post.find({})
         .then(posts => {
-            console.log(posts[0].createdAt);
+            console.log(posts);
             let sortedPosts = [...posts].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
             res.render('index', {posts: sortedPosts});
+        })
+        .catch(err => {
+            res.render('index', {posts: []});
+
         })
 }
 

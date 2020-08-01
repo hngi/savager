@@ -7,9 +7,7 @@ const bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: true });
 
 router.get('/signup',async (req, res) => {
-    var data={"message":null}
-    res.render('signup',{data:data})
-
+    res.redirect('/signup')
 })
 
 router.post('/signup', urlencodedParser, async (req, res) => {
@@ -21,13 +19,11 @@ router.post('/signup', urlencodedParser, async (req, res) => {
         const userNames = await User.findOne({ 'local.user_name': userName } );
         
         if (user) {
-            console.log('=============')
-            res.render('signup', { title: 'Express', error: null });
-            // res.redirect('/signup')
+            res.render('signup', { title: 'Express', error: 'Email already exists' });
         }
         else if (userNames) {
             var error = {message:"Username Already exists"};
-            res.render('signup', { title: 'Express', error: 'Username Already exists' });
+            res.render('signup', { title: 'Express', error: 'Username already exists' });
         }
     
         else if (!user && !userNames) {
@@ -44,64 +40,51 @@ router.post('/signup', urlencodedParser, async (req, res) => {
                         country: req.body.country
                     }
                 })
-                console.log(user)
-                req.user = user;
                 res.redirect("/users/dashboard")
             }
             catch(e){
-                res.send(e.message)
+                console.log(e.message)
+                res.render('signup', { title: 'Express', error: 'Error occured' });
             }
         }
-        
     } catch (error) {
-        res.send(error.message)
-        
+        console.log(error.message)
+        res.render('signup', { title: 'Express', error: 'Error occured' });
     }
 })    
 
     
-router.get('/signin', async (req, res) => {
-   
-    var data={"message":null}
-    res.render('login',{data:data})
+router.get('/login', async (req, res) => {
+    res.redirect('/login')
 })
 
 
-router.post('/signin', urlencodedParser, async (req, res) => {
-    var email = req.body.email
+router.post('/login', urlencodedParser, async (req, res) => {
+    let email = req.body.email;
+    let userName = req.body.user_name;
     
-    const uSer = await User.findOne({ 'local.email': email })
+    const user = await User.findOne({ 'local.user_name': userName })
     
-    if (!uSer) {
-        var data={"message":"Cannot find user"}
-        res.render('login',{data:data})
+    if (!user) {
+        res.render('login',{error:"Invalid credentials"})
    }
-    else if (uSer) {
+    else if (user) {
        // const passWord= user.password
-       const dat= uSer.local
-        console.log(dat.password)
-        try{
-       
-       const match=await bcrypt.compare(req.body.password,dat.password)
+       const match=await bcrypt.compare(req.body.password,user.local.password)
         if (match) {
             //res.write("Login Successful")
              
-             res.send('Success')
+             res.redirect('/users/dashboard');
         } else {
           //  console.log(uSer)
            // res.write("Incorrect Password")
            var data={"message":"Incorrect Password"}
-           res.render('login',{data:data})
+           res.render('login',{error:"Invalid credentials"})
         }
-        }
-catch(e){
-    res.send(e.message)
-}
     }
 })
 
 router.get('/dashboard',(req, res) => {
-    res.render("user_dashbaord")
-
+    res.render("user_dashboard")
 })
 module.exports=router;
