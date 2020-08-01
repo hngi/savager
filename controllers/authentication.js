@@ -72,14 +72,17 @@ router.post('/login', urlencodedParser, async (req, res) => {
     let userName = req.body.user_name;
 
     try {
-        const user = await User.findOne({ 'local.email': email })
+        const userByEmail = await User.findOne({ 'local.email': userName });
+        const userByUname = await User.findOne({'local.user_name': userName});
     
+        const user = userByEmail || userByUname;
+
         if (!user) {
             var data={"message":"Cannot find user"}
             res.render('login',{error:"Invalid credentials"})
         }
         else if (user) {
-            const match=await bcrypt.compare(req.body.password,dat.password)
+            const match=await bcrypt.compare(req.body.password,user.local.password)
             if (match) {
                 //res.write("Login Successful")
                 req.session.user = {

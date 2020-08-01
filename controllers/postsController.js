@@ -54,10 +54,10 @@ exports.renderPage = (req, res) => {
 }
 
 // dev route
-// exports.addUsers = (req, res) => {
-//     console.log('>>id ', req.session.user);
-//     Post.remove({})
-//     .then(result => {
-//         res.json(result);
-//     })
-// }
+exports.addUsers = (req, res) => {
+    console.log('>>id ', req.session.user);
+    User.find({})
+    .then(result => {
+        res.json(result);
+    })
+}
