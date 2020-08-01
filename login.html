@@ -3,55 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link 
-        rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
-        crossorigin="anonymous">
+    <title>Sign in page</title>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/css/tooltipster.min.css">
-    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/login.css">
-    <title>Savager  - Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <main>
-        <div class="login-container">
-            <div class="login-logo">
-                <img src="img/logo.jpg" alt="">
-            </div>
-            <div class="login-content">
-                <p class="login-header">Login with Savage</p>
-                <div class="login-form">
-                    <form action="">
-                        <input type="text" class="form-control login-input" placeholder='Username' required>
-                        <div class="login-copy">
-                            <input type="password" class="form-control login-input" placeholder='Password' required>
-                            <a href="#">Copy</a>
-                        </div>
-                        <div class="login-submit mb-4 d-flex justify-content-between">
-                            <a href="signup.html">Need an account?</a>
-                            <button type="submit" class="login-button">Login</button>
-                        </div>
-                        <div class="login-form-footer py-3">
-                            <p class="py-3">or with Social Network</p>
-                            <div class="login-form-social">
-                                <a href="" class="login-facebook login-social"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href="" class="login-twitter login-social"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                <a href="" class="login-google login-social"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+    <div class="signin-container py-5" >
+       
+        <div class="signin-content">
+            <p class="signin-header">Sign in</p>
+            <div class="signin-form">
+                <form action="">
+                    <input type="email" class="form-control signup-input" placeholder='Email address' required>
+                    <input type="password" class="form-control signup-input" placeholder='Password' required>
+                    <div class="row col-10 col-lg-6 ml-2">
+                        <input class="form-check-input" type="checkbox" value="" >
+                   <label for="remember" class="text-center" id="rememberme">Remember me</label><br>
+                   </div>
+                    <div class="signup-submit mb-5 ">
+            <button class="signin-button col-12">Sign in</button>
+                        
+                    </div>
+                </form>
             </div>
         </div>
-    </main>
-    <footer>
-        <div class="login-footer mb-5">
-            <div class="container">
-                <p class="text-center">Terms & Conditons . Privacy Policy</p>
-            </div>
+    </div>
+</main>
+<footer>
+    <div class="signin-footer">
+        <div class="container">
+            <p class="text-center">Terms & Conditons . Privacy Policy</p>
         </div>
-    </footer>
+    </div>
+</footer>
+    
+           
+           
 </body>
 </html>
