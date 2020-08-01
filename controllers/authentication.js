@@ -7,109 +7,103 @@ const bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: true });
 
 router.get('/signup',async (req, res) => {
-    var data={"message":null}
-    res.render('signup',{data:data})
-
+    res.redirect('/signup')
 })
 
 router.post('/signup', urlencodedParser, async (req, res) => {
-  
     var email = req.body.email
     var userName = req.body.user_name
-    const user = await User.findOne({ 'local.email': email } );
+    try {
+        const user = await User.findOne({ 'local.email': email } );
    
-    const userNames = await User.findOne({ 'local.user_name': userName } );
-    
-    if (user) {
-        var data={"message":"Email is in use"}
-       res.render("signup",{data:data})
-    }
-    else if (userNames) {
+        const userNames = await User.findOne({ 'local.user_name': userName } );
         
-        var data={"message":"Username Already exists"}
-        res.render('signup',{data:data})
-    }
-   
-    else if (!user && !userNames) {
-        try{
-   
-        const hashedPassword = await bcrypt.hash(req.body.password, 10)
-        const user = await User.create({
-            local: {
-                first_name: req.body.first_name,
-                user_name: req.body.user_name,
-                last_name: req.body.last_name,
-                email: req.body.email,
-                is_active: 1,
-                password: hashedPassword,
-                country: req.body.country
-            },
-            points: 0
-        })
-        
-        req.session.user = {
-            email: user.local.email,
-            user_name: user.local.user_name,
-            _id: user._id
+        if (user) {
+            res.render('signup', { title: 'Express', error: 'Email already exists' });
         }
-        console.log(user)
-        res.send('success')
-        // res.render("login")
+        else if (userNames) {
+            var error = {message:"Username Already exists"};
+            res.render('signup', { title: 'Express', error: 'Username already exists' });
+        }
+    
+        else if (!user && !userNames) {
+            try{
+                const hashedPassword = await bcrypt.hash(req.body.password, 10)
+                const user = await User.create({
+                    local: {
+                        first_name: req.body.first_name,
+                        user_name: req.body.user_name,
+                        last_name: req.body.last_name,
+                        email: req.body.email,
+                        is_active: 1,
+                        password: hashedPassword,
+                        country: req.body.country
+                    },
+                    points: 0
+                })
+
+                req.session.user = {
+                    email: user.local.email,
+                    user_name: user.local.user_name,
+                    _id: user._id
+                };
+
+                res.redirect("/users/dashboard")
+            }
+            catch(e){
+                console.log(e.message)
+                res.render('signup', { title: 'Express', error: 'Error occured' });
+            }
+        }
+    } catch (error) {
+        console.log(error.message)
+        res.render('signup', { title: 'Express', error: 'Error occured' });
     }
-
-    catch(e){
-    res.send(e.message)
-    }
-
-}
-
 })    
 
     
-router.get('/signin', async (req, res) => {
-   
-    var data={"message":null}
-    res.render('login',{data:data})
+router.get('/login', async (req, res) => {
+    res.redirect('/login')
 })
 
 
-router.post('/signin', urlencodedParser, async (req, res) => {
-    var email = req.body.email
-    
-    const user = await User.findOne({ 'local.email': email })
-    
-    if (!user) {
-        var data={"message":"Cannot find user"}
-        res.render('login',{data:data})
-   }
-    else if (user) {
-       // const passWord= user.password
-       console.log(user);
-       const dat= user.local
-        console.log(dat.password)
-        try{
-       
-       const match=await bcrypt.compare(req.body.password,dat.password)
-        if (match) {
-            //res.write("Login Successful")
-            req.session.user = {
-                email: user.local.email,
-                user_name: user.local.user_name,
-                _id: user._id
-            }
+router.post('/login', urlencodedParser, async (req, res) => {
+    let email = req.body.email;
+    let userName = req.body.user_name;
 
-            console.log('>>> user', req.session.user)
-            res.send('Success')
-        } else {
-          //  console.log(uSer)
-           // res.write("Incorrect Password")
-           var data={"message":"Incorrect Password"}
-           res.render('login',{data:data})
+    try {
+        const user = await User.findOne({ 'local.email': email })
+    
+        if (!user) {
+            var data={"message":"Cannot find user"}
+            res.render('login',{error:"Invalid credentials"})
         }
+        else if (user) {
+            const match=await bcrypt.compare(req.body.password,dat.password)
+            if (match) {
+                //res.write("Login Successful")
+                req.session.user = {
+                    email: user.local.email,
+                    user_name: user.local.user_name,
+                    _id: user._id
+                }
+
+                res.redirect('/users/dashboard');
+            } else {
+            //  console.log(uSer)
+            // res.write("Incorrect Password")
+            var data={"message":"Incorrect Password"}
+            res.render('login',{error:"Invalid credentials"})
+            }
         }
-catch(e){
-    res.send(e.message)
-}
+    } catch (error) {
+        res.render('login',{error:"Error Occured"})
     }
+    
+    
+})
+
+router.get('/dashboard',(req, res) => {
+    res.render("admin_dashboard")
 })
 module.exports=router;
